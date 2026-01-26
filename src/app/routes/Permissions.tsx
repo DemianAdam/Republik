@@ -36,7 +36,7 @@ export default function Permissions() {
           <div className="flex gap-3">
             <button
               onClick={handleOpenCreate}
-              className="flex items-center gap-2 rounded-lg bg-emerald-600 px-4 py-2 text-sm font-medium text-white hover:bg-emerald-500 transition-colors shadow-lg shadow-emerald-900/20"
+              className="flex items-center gap-2 rounded-lg bg-red-600 px-4 py-2 text-sm font-medium text-white hover:bg-red-500 transition-colors shadow-lg shadow-red-900/20"
             >
               <Plus className="h-4 w-4" />
               Nuevo Usuario

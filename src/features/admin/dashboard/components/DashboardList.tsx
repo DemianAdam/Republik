@@ -69,7 +69,7 @@ export default function DashboardList() {
               type="text"
               placeholder={"Buscar por nombre..."}
               onChange={(e) => setSearchValue(e.target.value)}
-              className="w-full rounded-xl border border-white/10 bg-zinc-900/50 py-3 pl-10 pr-4 text-white placeholder-zinc-500 backdrop-blur-md focus:border-emerald-500 focus:outline-none transition-colors"
+              className="w-full rounded-xl border border-white/10 bg-zinc-900/50 py-3 pl-10 pr-4 text-white placeholder-zinc-500 backdrop-blur-md focus:border-red-500 focus:outline-none transition-colors"
             />
           </div>
         </div>
@@ -81,7 +81,7 @@ export default function DashboardList() {
           <select
             value={filterMode}
             onChange={(e) => setFilterMode(e.target.value)}
-            className="w-full appearance-none rounded-xl border border-white/10 bg-zinc-900/50 py-3 pl-10 pr-8 text-white backdrop-blur-md focus:border-emerald-500 focus:outline-none cursor-pointer transition-colors"
+            className="w-full appearance-none rounded-xl border border-white/10 bg-zinc-900/50 py-3 pl-10 pr-8 text-white backdrop-blur-md focus:border-red-500 focus:outline-none cursor-pointer transition-colors"
           >
             <option value="ALL">Todos</option>
             <option value="MINE">Mis Invitados</option>

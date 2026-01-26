@@ -33,7 +33,7 @@ export default function ScanFeedback({
     // Z-Index must be higher than QrScanner (which is usually 1000)
     <div 
       className={`fixed inset-0 z-[2000] flex flex-col items-center justify-center px-6 text-center animate-in fade-in duration-200 backdrop-blur-sm
-        ${status === "success" ? "bg-emerald-900/95" : ""}
+        ${status === "success" ? "bg-red-900/95" : ""}
         ${status === "error" ? "bg-red-700/85" : ""}
         ${status === "loading" ? "bg-black/80" : ""}
       `}
@@ -52,7 +52,7 @@ export default function ScanFeedback({
               Acceso Permitido
             </h2>
             {guestName && (
-              <div className="flex items-center justify-center gap-2 text-emerald-100 text-xl font-medium mt-4 bg-black/20 py-2 px-6 rounded-full">
+              <div className="flex items-center justify-center gap-2 text-red-100 text-xl font-medium mt-4 bg-black/20 py-2 px-6 rounded-full">
                 <User className="h-5 w-5" />
                 {guestName}
               </div>
@@ -88,7 +88,7 @@ export default function ScanFeedback({
       {/* LOADING STATE */}
       {status === "loading" && (
         <div className="flex flex-col items-center gap-4">
-          <div className="h-16 w-16 animate-spin rounded-full border-4 border-white/20 border-t-emerald-500" />
+          <div className="h-16 w-16 animate-spin rounded-full border-4 border-white/20 border-t-red-500" />
           <p className="text-xl font-bold text-white tracking-widest uppercase">Verificando...</p>
         </div>
       )}

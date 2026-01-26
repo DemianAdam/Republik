@@ -28,11 +28,11 @@ export const ROLE_UI = {
     admin: {
         label: "Admin",
         style: {
-            badgeColor: "bg-emerald-500/10 text-emerald-500 border-emerald-500/20",
-            selectColor: "text-emerald-500 border-emerald-500/50 bg-emerald-500/10",
-            textColor: "text-emerald-500",
-            hoverText: "hover:text-emerald-500",
-            borderColor: "border-emerald-500/50"
+            badgeColor: "bg-red-500/10 text-red-500 border-red-500/20",
+            selectColor: "text-red-500 border-red-500/50 bg-red-500/10",
+            textColor: "text-red-500",
+            hoverText: "hover:text-red-500",
+            borderColor: "border-red-500/50"
         }
     },
     rrpp: {

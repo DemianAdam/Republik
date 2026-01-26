@@ -62,7 +62,7 @@ export default function GuestFormModal({
                 required
                 value={createPerson.fullname}
                 onChange={(e) => setCreatePerson({ ...createPerson, fullname: e.target.value })}
-                className="w-full rounded-xl border border-white/10 bg-black/20 py-3 pl-10 pr-4 text-white placeholder-zinc-600 focus:border-emerald-500 focus:outline-none focus:ring-1 focus:ring-emerald-500"
+                className="w-full rounded-xl border border-white/10 bg-black/20 py-3 pl-10 pr-4 text-white placeholder-zinc-600 focus:border-red-500 focus:outline-none focus:ring-1 focus:ring-red-500"
                 placeholder="Ej. Sofia Martinez"
               />
             </div>
@@ -75,7 +75,7 @@ export default function GuestFormModal({
               <input 
                 value={formData.dni}
                 onChange={(e) => setFormData({ ...formData, dni: e.target.value })}
-                className="w-full rounded-xl border border-white/10 bg-black/20 py-3 pl-10 pr-4 text-white placeholder-zinc-600 focus:border-emerald-500 focus:outline-none focus:ring-1 focus:ring-emerald-500"
+                className="w-full rounded-xl border border-white/10 bg-black/20 py-3 pl-10 pr-4 text-white placeholder-zinc-600 focus:border-red-500 focus:outline-none focus:ring-1 focus:ring-red-500"
                 placeholder="Ej. 38.123.456"
               />
             </div>
@@ -101,7 +101,7 @@ export default function GuestFormModal({
 
           <button
             type="submit"
-            className="w-full rounded-xl bg-emerald-600 py-3.5 font-semibold text-white shadow-lg shadow-emerald-900/20 transition-all hover:bg-emerald-500 hover:scale-[1.02] active:scale-[0.98]"
+            className="w-full rounded-xl bg-red-600 py-3.5 font-semibold text-white shadow-lg shadow-red-900/20 transition-all hover:bg-red-500 hover:scale-[1.02] active:scale-[0.98]"
           >
             {isLoading && <Loader2 className="h-4 w-4 animate-spin" />}
             {isUpdating ? "Guardar Cambios" : "Agregar Invitado"}

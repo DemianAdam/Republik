@@ -10,15 +10,15 @@ export default function AdminAuth() {
 
   return (
     // 1. Main Container: Deep dark background
-    <div className="relative min-h-screen w-full bg-zinc-950 text-white overflow-hidden selection:bg-emerald-500/30">
+    <div className="relative min-h-screen w-full bg-zinc-950 text-white overflow-hidden selection:bg-red-500/30">
 
       {/* 2. Background Effects (Fixed position to stay while scrolling) */}
       <div className="pointer-events-none fixed inset-0 z-0">
 
-        {/* Deep Emerald Glow - Bottom Right */}
+        {/* Deep red Glow - Bottom Right */}
         <div className="absolute inset-0 opacity-5">
-          <div className="absolute top-0 left-0 w-96 h-96 bg-green-500 rounded-full blur-3xl" />
-          <div className="absolute bottom-0 right-0 w-96 h-96 bg-green-700 rounded-full blur-3xl" />
+          <div className="absolute top-0 left-0 w-96 h-96 bg-red-500 rounded-full blur-3xl" />
+          <div className="absolute bottom-0 right-0 w-96 h-96 bg-red-700 rounded-full blur-3xl" />
         </div>
       </div>
       {/* 3. Content Layer */}
@@ -27,7 +27,7 @@ export default function AdminAuth() {
         <AuthLoading>
           <div className="flex-1 flex items-center justify-center">
             <div className="flex flex-col items-center gap-4 text-zinc-500">
-              <Loader2 className="h-8 w-8 animate-spin text-emerald-600" />
+              <Loader2 className="h-8 w-8 animate-spin text-red-600" />
               <p className="text-sm font-medium animate-pulse">Verificando credenciales...</p>
             </div>
           </div>

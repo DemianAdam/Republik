@@ -13,7 +13,7 @@ export default function Gallery() {
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-5xl md:text-6xl font-bold text-white mb-4">
-            <span className="text-green-500">Experiencia</span> Natura
+            <span className="text-red-500">Experiencia</span> Natura
           </h2>
           <p className="text-xl text-gray-400">Vive las noches más inolvidables</p>
         </div>
@@ -29,7 +29,7 @@ export default function Gallery() {
                 alt={`Natura ${index + 1}`}
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
               />
-              <div className="absolute inset-0 bg-green-600/0  transition-all duration-300" />
+              <div className="absolute inset-0 bg-red-600/0  transition-all duration-300" />
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
             </div>
           ))}

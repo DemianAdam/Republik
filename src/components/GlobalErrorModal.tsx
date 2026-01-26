@@ -51,7 +51,7 @@ export default function GlobalErrorModal() {
               <span className="text-[10px] uppercase tracking-wider text-zinc-600 font-bold">
                 Código de Error
               </span>
-              {copied && <span className="text-[10px] text-emerald-500">Copiado</span>}
+              {copied && <span className="text-[10px] text-red-500">Copiado</span>}
             </div>
             <div className="flex items-center justify-between gap-2">
               <code className="font-mono text-xs text-red-400 break-all">

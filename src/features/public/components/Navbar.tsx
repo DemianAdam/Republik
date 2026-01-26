@@ -41,7 +41,7 @@ export default function Navbar() {
       {!isContactPage && (
         <Link
           to="/contact"
-          className="px-6 py-2 bg-white text-black font-semibold rounded-full text-sm hover:bg-green-600 hover:text-white transition-all duration-300 shadow-[0_0_15px_rgba(255,255,255,0.2)] hover:shadow-green-500/50"
+          className="px-6 py-2 bg-white text-black font-semibold rounded-full text-sm hover:bg-red-600 hover:text-white transition-all duration-300 shadow-[0_0_15px_rgba(255,255,255,0.2)] hover:shadow-red-500/50"
         >
           Contacto
         </Link>

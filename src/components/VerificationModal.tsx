@@ -17,8 +17,8 @@ export default function VerificationModal({ isOpen, data, onConfirm, onCancel }:
       <div className="bg-zinc-900 border border-white/10 rounded-2xl w-full max-w-sm overflow-hidden shadow-2xl scale-100 animate-in zoom-in-95 duration-200">
 
         {/* Header */}
-        <div className="bg-emerald-600/10 border-b border-emerald-500/20 p-4 flex flex-col items-center">
-          <div className="h-12 w-12 rounded-full bg-emerald-600/20 flex items-center justify-center text-emerald-500 mb-2">
+        <div className="bg-red-600/10 border-b border-red-500/20 p-4 flex flex-col items-center">
+          <div className="h-12 w-12 rounded-full bg-red-600/20 flex items-center justify-center text-red-500 mb-2">
             <User className="h-6 w-6" />
           </div>
           <h3 className="text-lg font-bold text-white">¿Eres tú?</h3>
@@ -45,7 +45,7 @@ export default function VerificationModal({ isOpen, data, onConfirm, onCancel }:
           </button>
           <button
             onClick={onConfirm}
-            className="p-4 text-emerald-400 hover:bg-emerald-500/10 transition-colors font-bold text-sm flex items-center justify-center gap-2"
+            className="p-4 text-red-400 hover:bg-red-500/10 transition-colors font-bold text-sm flex items-center justify-center gap-2"
           >
             <Check className="h-4 w-4" />
             Sí, soy yo

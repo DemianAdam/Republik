@@ -79,7 +79,7 @@ export default function SelfCheckIn() {
       />
 
       {/* 2. Gradient Overlay (Layer 0) - Kept dark to ensure readability */}
-      <div className="absolute inset-0 z-0 bg-gradient-to-b from-green-950/80 via-black/60 to-black/90" />
+      <div className="absolute inset-0 z-0 bg-gradient-to-b from-red-950/80 via-black/60 to-black/90" />
 
       {/* 3. CONTENT WRAPPER (Layer 10) - This fixes the transparency/stacking issue */}
       <div className="relative z-10 flex flex-col items-center w-full max-w-md">
@@ -96,10 +96,10 @@ export default function SelfCheckIn() {
 
         {/* Icon Graphic */}
         <div className="relative mb-8 animate-pulse">
-          <div className="absolute inset-0 bg-emerald-500/20 blur-3xl rounded-full" />
+          <div className="absolute inset-0 bg-red-500/20 blur-3xl rounded-full" />
           {/* Added bg-zinc-900 to ensure the box isn't transparent */}
           <div className="relative flex h-32 w-32 items-center justify-center rounded-[2rem] bg-zinc-900 bg-gradient-to-br from-zinc-800 to-zinc-900 border border-white/10 shadow-2xl">
-            <ScanLine className="h-16 w-16 text-emerald-400" />
+            <ScanLine className="h-16 w-16 text-red-400" />
           </div>
         </div>
 
@@ -116,7 +116,7 @@ export default function SelfCheckIn() {
         {/* Primary Action Area */}
         <div className="w-full max-w-xs space-y-6">
 
-          <p className="text-emerald-400/90 text-sm font-medium animate-in fade-in slide-in-from-bottom-2 drop-shadow-sm">
+          <p className="text-red-400/90 text-sm font-medium animate-in fade-in slide-in-from-bottom-2 drop-shadow-sm">
             Tener DNI en mano.
           </p>
 
@@ -125,13 +125,13 @@ export default function SelfCheckIn() {
             className="relative w-full overflow-hidden rounded-2xl bg-white text-black py-4 font-bold text-lg shadow-[0_0_30px_rgba(16,185,129,0.4)] transition-all hover:scale-[1.02] hover:shadow-[0_0_45px_rgba(16,185,129,0.6)] active:scale-[0.98]"
           >
             <span className="relative z-10 flex items-center justify-center gap-3">
-              <IdCard className="h-6 w-6 text-emerald-800" />
+              <IdCard className="h-6 w-6 text-red-800" />
               Escanea tu DNI
             </span>
           </button>
 
-          <div className="inline-flex items-center justify-center gap-2 px-4 py-1.5 rounded-full bg-black/60 border border-emerald-500/20 text-xs text-zinc-300 font-medium uppercase tracking-widest backdrop-blur-md">
-            <div className="h-1.5 w-1.5 rounded-full bg-emerald-500 shadow-[0_0_10px_#10b981]" />
+          <div className="inline-flex items-center justify-center gap-2 px-4 py-1.5 rounded-full bg-black/60 border border-red-500/20 text-xs text-zinc-300 font-medium uppercase tracking-widest backdrop-blur-md">
+            <div className="h-1.5 w-1.5 rounded-full bg-red-500 shadow-[0_0_10px_#10b981]" />
             SECURE SYSTEM
           </div>
         </div>
@@ -150,7 +150,7 @@ export default function SelfCheckIn() {
           value={vipCode ?? ""}
           onChange={(e) => setVipCode(e.target.value)}
           placeholder="Ingresar código VIP"
-          className="w-full rounded-xl bg-zinc-900 border border-white/10 px-4 py-3 text-white placeholder:text-zinc-500 focus:outline-none focus:ring-2 focus:ring-emerald-500/60 focus:border-emerald-500 transition"
+          className="w-full rounded-xl bg-zinc-900 border border-white/10 px-4 py-3 text-white placeholder:text-zinc-500 focus:outline-none focus:ring-2 focus:ring-red-500/60 focus:border-red-500 transition"
         />
       </div>*/}
 

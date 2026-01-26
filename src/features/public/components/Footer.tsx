@@ -28,7 +28,7 @@ export default function Footer() {
   };
 
   return (
-    <footer className="relative bg-black border-t border-green-900/30 py-12 px-6">
+    <footer className="relative bg-black border-t border-red-900/30 py-12 px-6">
       <div className="max-w-7xl mx-auto">
         <div className="grid md:grid-cols-3 gap-12 items-start mb-12">
           
@@ -55,7 +55,7 @@ export default function Footer() {
                 <Link 
                   to="/#events" 
                   onClick={(e) => handleScrollLink(e, '#events')}
-                  className="hover:text-green-500 transition-colors cursor-pointer"
+                  className="hover:text-red-500 transition-colors cursor-pointer"
                 >
                   Eventos
                 </Link>
@@ -64,13 +64,13 @@ export default function Footer() {
                 <Link 
                   to="/#location" 
                   onClick={(e) => handleScrollLink(e, '#location')}
-                  className="hover:text-green-500 transition-colors cursor-pointer"
+                  className="hover:text-red-500 transition-colors cursor-pointer"
                 >
                   Ubicación
                 </Link>
               </li>
               <li>
-                <Link to="/contact" onClick={scrollToTop} className="hover:text-green-500 transition-colors">
+                <Link to="/contact" onClick={scrollToTop} className="hover:text-red-500 transition-colors">
                   Reservas
                 </Link>
               </li>
@@ -85,7 +85,7 @@ export default function Footer() {
                 href="https://www.instagram.com/naturamina/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center justify-center w-12 h-12 rounded-full bg-green-900/30 hover:bg-green-600 text-white transition-all duration-300 hover:scale-110"
+                className="flex items-center justify-center w-12 h-12 rounded-full bg-red-900/30 hover:bg-red-600 text-white transition-all duration-300 hover:scale-110"
               >
                 <Instagram className="w-5 h-5" />
               </a>
@@ -93,7 +93,7 @@ export default function Footer() {
                 href="https://api.whatsapp.com/send?phone=5493544624012&text=Hola%20Natura!%20%20%F0%9F%8D%83%20"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center justify-center w-12 h-12 rounded-full bg-green-900/30 hover:bg-green-600 text-white transition-all duration-300 hover:scale-110"
+                className="flex items-center justify-center w-12 h-12 rounded-full bg-red-900/30 hover:bg-red-600 text-white transition-all duration-300 hover:scale-110"
               >
                 <MessageCircle className="w-5 h-5" />
               </a>
@@ -106,7 +106,7 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="pt-8 border-t border-green-900/30 text-center text-gray-500 text-sm">
+        <div className="pt-8 border-t border-red-900/30 text-center text-gray-500 text-sm">
           <p>© {new Date().getFullYear()} Natura Night Club - Mina Clavero, Córdoba</p>
         </div>
       </div>

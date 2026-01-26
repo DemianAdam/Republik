@@ -19,7 +19,7 @@ const navigate = useNavigate(); // 2. Initialize hook
         className="absolute inset-0 h-full w-full object-cover opacity-40"
       />
 
-      <div className="absolute inset-0 bg-gradient-to-b from-green-950/60 via-black/40 to-black/90" />
+      <div className="absolute inset-0 bg-gradient-to-b from-red-950/60 via-black/40 to-black/90" />
 
       <div className="relative h-full z-10 flex flex-col items-center px-6 text-center">
         <div className="animate-fade-in-up mb-8">
@@ -43,7 +43,7 @@ const navigate = useNavigate(); // 2. Initialize hook
         <div className="animate-fade-in-up animation-delay-600 flex flex-col sm:flex-row gap-4">
           <button
             onClick={() => navigate('self-check-in')} // 3. Use navigate on button click
-            className="group relative px-10 py-4 bg-green-500 hover:bg-green-600 text-white text-lg font-semibold rounded-full transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-green-500/50"
+            className="group relative px-10 py-4 bg-red-500 hover:bg-red-600 text-white text-lg font-semibold rounded-full transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-red-500/50"
           >
             Anotate
             <span className="absolute inset-0 rounded-full bg-white opacity-0 group-hover:opacity-10 transition-opacity" />

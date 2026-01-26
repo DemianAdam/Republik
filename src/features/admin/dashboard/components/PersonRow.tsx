@@ -80,16 +80,16 @@ export default function PersonRow({ person }: PersonRowProps) {
             className={`
                 group relative flex items-center justify-between overflow-hidden rounded-xl border p-4 transition-all
                 ${isInside
-                    ? 'border-emerald-500/30 bg-emerald-500/5'
+                    ? 'border-red-500/30 bg-red-500/5'
                     : 'border-white/5 bg-zinc-900/40 hover:border-white/10'
                 }
               `}>
 
-            <div className={`absolute left-0 top-0 bottom-0 w-1.5 transition-colors ${isInside ? 'bg-emerald-500 shadow-[0_0_10px_#10b981]' : 'bg-transparent'}`} />
+            <div className={`absolute left-0 top-0 bottom-0 w-1.5 transition-colors ${isInside ? 'bg-red-500 shadow-[0_0_10px_#10b981]' : 'bg-transparent'}`} />
 
             <div className="flex flex-col pl-3">
                 <div className="flex items-center gap-2">
-                    <h3 className={`font-semibold text-lg ${isInside ? 'text-emerald-100' : 'text-white'}`}>
+                    <h3 className={`font-semibold text-lg ${isInside ? 'text-red-100' : 'text-white'}`}>
                         {person.fullname}
                     </h3>
                     {person.isVip && (
@@ -152,7 +152,7 @@ export default function PersonRow({ person }: PersonRowProps) {
                     fallbackComponent={<RRPPBadge isInside={isInside} />}>
                     <button
                         onClick={() => toggleStatus({ personId: person._id, isInside: !person.isInside })}
-                        className={`flex items-center justify-center rounded-lg px-4 py-2 text-sm font-medium transition-all active:scale-95 ${isInside ? 'bg-zinc-800/50 text-zinc-500 hover:text-white hover:bg-zinc-700' : 'bg-emerald-600 text-white shadow-lg shadow-emerald-900/20 hover:bg-emerald-500'}`}>
+                        className={`flex items-center justify-center rounded-lg px-4 py-2 text-sm font-medium transition-all active:scale-95 ${isInside ? 'bg-zinc-800/50 text-zinc-500 hover:text-white hover:bg-zinc-700' : 'bg-red-600 text-white shadow-lg shadow-red-900/20 hover:bg-red-500'}`}>
                         {isInside ? <Undo2 className="h-5 w-5" /> : (
                             <div className="flex items-center gap-2">
                                 <Check className="h-4 w-4" />
@@ -197,7 +197,7 @@ function RRPPBadge({ isInside }: RRPPBadgeProps) {
         <div className={`
                         flex items-center justify-center rounded-lg px-4 py-2 text-sm font-medium border
                         ${isInside
-                ? 'bg-emerald-500/10 text-emerald-500 border-emerald-500/20'
+                ? 'bg-red-500/10 text-red-500 border-red-500/20'
                 : 'bg-zinc-800/50 text-zinc-500 border-zinc-700/50'
             }
                     `}>

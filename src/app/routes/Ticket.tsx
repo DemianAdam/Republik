@@ -88,9 +88,9 @@
 //     };
 
 //     return {
-//       container: "bg-black border-emerald-500/50",
-//       glowBg: "bg-emerald-500/30",
-//       badge: "bg-emerald-500/10 text-emerald-400 border-emerald-500/20",
+//       container: "bg-black border-red-500/50",
+//       glowBg: "bg-red-500/30",
+//       badge: "bg-red-500/10 text-red-400 border-red-500/20",
 //       statusText: "ACCESO VÁLIDO",
 //       icon: <CheckCircle2 className="h-4 w-4 animate-pulse" />,
 //       qrColor: "#10b981"
@@ -118,7 +118,7 @@
 //       `}</style>
 
 //       {/* BACKGROUND AMBIENCE */}
-//       <div className={`absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full blur-[120px] opacity-20 pointer-events-none transition-colors duration-1000 ${isUsed ? 'bg-zinc-800' : isVip ? 'bg-amber-600' : 'bg-emerald-600'}`} />
+//       <div className={`absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full blur-[120px] opacity-20 pointer-events-none transition-colors duration-1000 ${isUsed ? 'bg-zinc-800' : isVip ? 'bg-amber-600' : 'bg-red-600'}`} />
 
 //       {/* ACTIONS */}
 //       <div className="absolute top-6 right-6 flex gap-3 z-50">
@@ -233,7 +233,7 @@
 // function LoadingState() {
 //   return (
 //     <div className="min-h-screen bg-zinc-950 flex items-center justify-center">
-//       <div className="w-8 h-8 border-2 border-emerald-500 border-t-transparent rounded-full animate-spin" />
+//       <div className="w-8 h-8 border-2 border-red-500 border-t-transparent rounded-full animate-spin" />
 //     </div>
 //   );
 // }
@@ -328,9 +328,9 @@ export default function TicketPage() {
     };
 
     return {
-      container: "bg-black border-emerald-500/50",
-      glowBg: "bg-emerald-500/30",
-      badge: "bg-emerald-500/10 text-emerald-400 border-emerald-500/20",
+      container: "bg-black border-red-500/50",
+      glowBg: "bg-red-500/30",
+      badge: "bg-red-500/10 text-red-400 border-red-500/20",
       statusText: "ACCESO VÁLIDO",
       icon: <CheckCircle2 className="h-4 w-4 animate-pulse" />,
       qrColor: "#10b981"
@@ -371,7 +371,7 @@ export default function TicketPage() {
       <div className={`absolute inset-0 bg-gradient-to-b z-0 transition-colors duration-1000
           ${isUsed 
             ? 'from-zinc-950 via-zinc-900 to-black' 
-            : 'from-green-950/60 via-black/60 to-black/90'
+            : 'from-red-950/60 via-black/60 to-black/90'
           }
       `} />
 
@@ -503,7 +503,7 @@ export default function TicketPage() {
 function LoadingState() {
   return (
     <div className="min-h-screen bg-zinc-950 flex items-center justify-center">
-      <div className="w-8 h-8 border-2 border-emerald-500 border-t-transparent rounded-full animate-spin" />
+      <div className="w-8 h-8 border-2 border-red-500 border-t-transparent rounded-full animate-spin" />
     </div>
   );
 }

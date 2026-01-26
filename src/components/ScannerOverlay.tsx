@@ -44,13 +44,13 @@ export default function ScannerOverlay({
         {/* The Box */}
         <div className={`relative w-[85%] max-w-sm ${square ? "aspect-square" : "aspect-[3/1]"} rounded-xl shadow-[0_0_0_9999px_rgba(0,0,0,0.85)]`}>
           {/* Corner Markers */}
-          <div className="absolute top-0 left-0 w-8 h-8 border-l-4 border-t-4 border-emerald-500 rounded-tl-lg" />
-          <div className="absolute top-0 right-0 w-8 h-8 border-r-4 border-t-4 border-emerald-500 rounded-tr-lg" />
-          <div className="absolute bottom-0 left-0 w-8 h-8 border-l-4 border-b-4 border-emerald-500 rounded-bl-lg" />
-          <div className="absolute bottom-0 right-0 w-8 h-8 border-r-4 border-b-4 border-emerald-500 rounded-br-lg" />
+          <div className="absolute top-0 left-0 w-8 h-8 border-l-4 border-t-4 border-red-500 rounded-tl-lg" />
+          <div className="absolute top-0 right-0 w-8 h-8 border-r-4 border-t-4 border-red-500 rounded-tr-lg" />
+          <div className="absolute bottom-0 left-0 w-8 h-8 border-l-4 border-b-4 border-red-500 rounded-bl-lg" />
+          <div className="absolute bottom-0 right-0 w-8 h-8 border-r-4 border-b-4 border-red-500 rounded-br-lg" />
 
           {/* Laser Animation */}
-          <div className="absolute inset-x-0 h-0.5 bg-emerald-500/50 shadow-[0_0_15px_rgba(16,185,129,0.8)] animate-[scan_2s_infinite]" />
+          <div className="absolute inset-x-0 h-0.5 bg-red-500/50 shadow-[0_0_15px_rgba(16,185,129,0.8)] animate-[scan_2s_infinite]" />
         </div>
 
         {/* Instructions (Below the box) */}

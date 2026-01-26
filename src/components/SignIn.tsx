@@ -57,14 +57,14 @@ export default function SignIn() {
             <div className="relative group">
               {/* Icon Wrapper: Added z-10 to ensure it sits on top */}
               <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none z-10">
-                <User className="h-5 w-5 text-gray-400 group-focus-within:text-green-500 transition-colors" />
+                <User className="h-5 w-5 text-gray-400 group-focus-within:text-red-500 transition-colors" />
               </div>
               <input
                 name="email"
                 placeholder="Email"
                 type="email"
                 required
-                className="w-full pl-10 pr-4 py-3 bg-white/5 border border-white/10 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent backdrop-blur-sm transition-all"
+                className="w-full pl-10 pr-4 py-3 bg-white/5 border border-white/10 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent backdrop-blur-sm transition-all"
               />
             </div>
 
@@ -72,14 +72,14 @@ export default function SignIn() {
             <div className="relative group">
               {/* Icon Wrapper: Added z-10 to ensure it sits on top */}
               <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none z-10">
-                <Lock className="h-5 w-5 text-gray-400 group-focus-within:text-green-500 transition-colors" />
+                <Lock className="h-5 w-5 text-gray-400 group-focus-within:text-red-500 transition-colors" />
               </div>
               <input
                 name="password"
                 placeholder="Contraseña"
                 type="password"
                 required
-                className="w-full pl-10 pr-4 py-3 bg-white/5 border border-white/10 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent backdrop-blur-sm transition-all"
+                className="w-full pl-10 pr-4 py-3 bg-white/5 border border-white/10 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent backdrop-blur-sm transition-all"
               />
 
             </div>
@@ -93,7 +93,7 @@ export default function SignIn() {
             {/* Submit Button */}
             <button
               type="submit"
-              className="w-full group relative flex justify-center py-3 px-4 border border-transparent text-sm font-medium rounded-lg text-white bg-green-600 hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500 transition-all duration-300 shadow-lg shadow-green-900/20"
+              className="w-full group relative flex justify-center py-3 px-4 border border-transparent text-sm font-medium rounded-lg text-white bg-red-600 hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500 transition-all duration-300 shadow-lg shadow-red-900/20"
             >
               Ingresar
               <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
