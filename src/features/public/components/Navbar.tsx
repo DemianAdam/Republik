@@ -26,7 +26,7 @@ export default function Navbar() {
 
       <Link to="/" className="flex items-center gap-3 group">
         <img
-          src="/logo-natura.webp"
+          src="/LogoRepublik.webp"
           alt="Natura"
           className="h-10 w-10 rounded-full border border-white/20 object-cover group-hover:scale-105 transition-transform duration-300"
           fetchpriority="high"

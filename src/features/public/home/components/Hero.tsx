@@ -11,7 +11,7 @@ const navigate = useNavigate(); // 2. Initialize hook
   return (
     <section className="relative h-svh w-full bg-black pt-32  ">
       <img
-        src="/leaves-background.webp"
+        src="/dark-red-neon-background.webp"
         aria-hidden="true"
         role="presentation"
         loading="eager"

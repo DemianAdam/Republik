@@ -33,7 +33,7 @@ export default function Contact() {
       <div
         className="absolute inset-0 bg-cover bg-center opacity-40"
         style={{
-          backgroundImage: 'url("/leaves-background.webp")',
+          backgroundImage: 'url("/dark-red-neon-background.webp")',
           backgroundAttachment: 'fixed'
         }}
       />

@@ -70,7 +70,7 @@ export default function SelfCheckIn() {
 
       {/* 1. Background Image (Layer 0) */}
       <img
-        src="/leaves-background.webp"
+        src="/dark-red-neon-background.webp"
         aria-hidden="true"
         role="presentation"
         loading="eager"
