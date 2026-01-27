@@ -4,7 +4,7 @@ import { Check, X, User } from "lucide-react";
 
 interface VerificationModalProps {
   isOpen: boolean;
-  data: CreateQrPerson; // Or your specific Guest type
+  data: CreateQrPerson; 
   onConfirm: () => void;
   onCancel: () => void;
 }

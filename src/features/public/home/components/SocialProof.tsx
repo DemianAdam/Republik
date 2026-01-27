@@ -2,7 +2,7 @@ export default function SocialProof() {
   return (
     <section className="relative bg-black py-24 px-6 overflow-hidden">
       <div className="absolute inset-0">
-        <div className="absolute inset-0 bg-[url('https://images.pexels.com/photos/1047442/pexels-photo-1047442.jpeg?auto=compress&cs=tinysrgb&w=1920')] bg-cover bg-center opacity-10" />
+        <div className="absolute inset-0 bg-[url('/social-proof.webp')] bg-cover bg-center opacity-40" />
       </div>
 
       <div className="relative z-10 max-w-6xl mx-auto text-center space-y-12">

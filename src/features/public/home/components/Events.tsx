@@ -4,31 +4,31 @@ const events = [
   {
     date: '16 ENE',
     day: 'Viernes',
-    title: 'Modo Diablo',
-    dj: 'DJ Jere Velasco',
+    title: 'Noche de Brujas',
+    dj: 'Pili Guzman & Jere Velasco',
     time: '00:00 HS',
-    image: '/Events/evento-1.webp',
-    video: '/Events/evento-1.mp4',
-    offset: 'object-[50%_30%]'
+    image: '/Events/event-1.webp',
+    //video: '/Events/event-1.mp4',
+    offset: 'object-[50%_7%]'
   },
   {
     date: '25 DIC',
     day: 'Jueves',
-    title: 'Navidad',
-    dj: 'Celebra Navidad en Republik',
+    title: 'RepubliK | VOL. 1',
+    dj: 'BRUNO BALMA',
     time: '00:00 HS',
-    image: '/Events/evento-2.webp',
-    video: '/Events/evento-2.mp4',
-    offset: 'object-[50%_58%]'
+    image: '/Events/event-2.webp',
+    //video: '/Events/event-2.mp4',
+    offset: 'object-[50%_0%]'
   },
   {
     date: '06 ENE',
     day: 'Domingos',
-    title: 'Old School Reggaeton',
+    title: 'RepubliK',
     dj: '2x1 EN TRAGOS',
     time: '00:00 HS',
-    image: '/Events/evento-3.webp',
-    video: '/Events/evento-3.mp4',
+    image: '/Events/event-3.webp',
+    //video: '/Events/event-3.mp4',
     offset: 'object-[50%_30%]'
   },
 ];
@@ -52,7 +52,7 @@ export default function Events() {
             >
               <div className="relative h-64 overflow-hidden">
 
-                <video
+                {/*<video
                   autoPlay
                   loop
                   muted
@@ -61,7 +61,8 @@ export default function Events() {
                   className={`w-full h-full object-cover ${event.offset}`}
                 >
                   <source src={event.video} type="video/mp4" />
-                </video>
+                </video>*/}
+                <img className={`w-full h-full object-cover ${event.offset}`} src={event.image}/>
                 <div className="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent" />
 
                 <div className="absolute top-4 right-4 bg-red-600 text-black px-4 py-2 rounded-full font-bold text-sm">
