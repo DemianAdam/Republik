@@ -27,7 +27,7 @@ export default function SignIn() {
         {/* 3. Background Image & Overlays */}
         <div className="absolute inset-0">
           <img
-            src="/dark-red-neon-background.webp"
+            src="/istockphoto-1466057420-2048x2048.png"
             alt="Background"
             className="w-full h-full object-cover opacity-50"
           />

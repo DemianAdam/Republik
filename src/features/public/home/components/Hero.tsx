@@ -11,7 +11,7 @@ const navigate = useNavigate(); // 2. Initialize hook
   return (
     <section className="relative h-svh w-full bg-black pt-32  ">
       <img
-        src="/dark-red-neon-background.webp"
+        src="/istockphoto-1466057420-2048x2048.png"
         aria-hidden="true"
         role="presentation"
         loading="eager"
@@ -37,7 +37,7 @@ const navigate = useNavigate(); // 2. Initialize hook
         </h1>
 
         <p className="opacity-0 animate-fade-in-up animation-delay-400 mb-12 max-w-2xl text-xl md:text-2xl text-gray-200 font-light tracking-wide">
-          Música, naturaleza y noches inolvidables
+          Música, fiesta y noches inolvidables
         </p>
 
         <div className="animate-fade-in-up animation-delay-600 flex flex-col sm:flex-row gap-4">

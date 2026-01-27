@@ -20,7 +20,7 @@ export default function Location() {
 
             <p className="text-lg text-gray-400 leading-relaxed">
               En el corazón de las sierras cordobesas, Republik se convierte en el epicentro
-              de las mejores noches. Un lugar único donde la naturaleza y la música se encuentran.
+              de las mejores noches. Un lugar único donde la fiesta y la música se encuentran.
             </p>
 
             <button className="flex items-center gap-3 px-8 py-4 bg-red-600 hover:bg-red-700 text-white rounded-full font-semibold transition-all duration-300 hover:scale-105">

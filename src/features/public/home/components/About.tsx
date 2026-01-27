@@ -1,4 +1,4 @@
-import { Leaf, Music, Sparkles } from 'lucide-react';
+import { Leaf, Music, PartyPopper, Sparkles } from 'lucide-react';
 
 export default function About() {
   return (
@@ -17,7 +17,7 @@ export default function About() {
             </h2>
 
             <p className="text-xl text-gray-300 leading-relaxed">
-              Republik es más que una discoteca. Es una experiencia única donde la energía de la naturaleza
+              Republik es más que una discoteca. Es una experiencia única donde la energía de la fiesta
               se fusiona con la vibra de las mejores noches.
             </p>
 
@@ -32,8 +32,8 @@ export default function About() {
                 <p className="text-sm text-gray-400">DJs</p>
               </div>
               <div className="text-center">
-                <Leaf className="w-8 h-8 text-red-600 mx-auto mb-2" />
-                <p className="text-sm text-gray-400">Naturaleza</p>
+                <PartyPopper className="w-8 h-8 text-red-600 mx-auto mb-2" />
+                <p className="text-sm text-gray-400">Fiesta</p>
               </div>
               <div className="text-center">
                 <Sparkles className="w-8 h-8 text-red-600 mx-auto mb-2" />

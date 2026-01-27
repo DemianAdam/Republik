@@ -42,7 +42,7 @@ export default function Footer() {
                 />
             </Link>
             <p className="text-gray-400">
-              El night club que fusiona naturaleza y música en el corazón de Villa Dolores.
+              El night club que fusiona fiesta y música en el corazón de Villa Dolores.
             </p>
           </div>
 

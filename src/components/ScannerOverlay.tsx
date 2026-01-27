@@ -50,7 +50,7 @@ export default function ScannerOverlay({
           <div className="absolute bottom-0 right-0 w-8 h-8 border-r-4 border-b-4 border-red-600 rounded-br-lg" />
 
           {/* Laser Animation */}
-          <div className="absolute inset-x-0 h-0.5 bg-red-600/50 shadow-[0_0_15px_rgba(16,185,129,0.8)] animate-[scan_2s_infinite]" />
+          <div className="absolute inset-x-0 h-0.5 bg-red-600/50 shadow-[0_0_15px_rgba(255,0,0,0.8)] animate-[scan_2s_infinite]" />
         </div>
 
         {/* Instructions (Below the box) */}

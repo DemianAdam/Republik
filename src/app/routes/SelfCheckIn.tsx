@@ -70,7 +70,7 @@ export default function SelfCheckIn() {
 
       {/* 1. Background Image (Layer 0) */}
       <img
-        src="/dark-red-neon-background.webp"
+        src="/istockphoto-1466057420-2048x2048.png"
         aria-hidden="true"
         role="presentation"
         loading="eager"
@@ -122,7 +122,7 @@ export default function SelfCheckIn() {
 
           <button
             onClick={() => setIsScannerOpen(true)}
-            className="relative w-full overflow-hidden rounded-2xl bg-white text-black py-4 font-bold text-lg shadow-[0_0_30px_rgba(16,185,129,0.4)] transition-all hover:scale-[1.02] hover:shadow-[0_0_45px_rgba(16,185,129,0.6)] active:scale-[0.98]"
+            className="relative w-full overflow-hidden rounded-2xl bg-white text-black py-4 font-bold text-lg shadow-[0_0_30px_rgba(255,0,0,0.4)] transition-all hover:scale-[1.02] hover:shadow-[0_0_45px_rgba(255,0,0,0.6)] active:scale-[0.98]"
           >
             <span className="relative z-10 flex items-center justify-center gap-3">
               <IdCard className="h-6 w-6 text-red-800" />
