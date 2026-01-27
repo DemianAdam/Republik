@@ -7,19 +7,19 @@ export default function Location() {
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className="space-y-6">
             <h2 className="text-5xl md:text-6xl font-bold text-white">
-              Dónde <span className="text-red-500">estamos</span>
+              Dónde <span className="text-red-600">estamos</span>
             </h2>
 
             <div className="flex items-start gap-4 text-gray-300">
-              <MapPin className="w-6 h-6 text-red-500 flex-shrink-0 mt-1" />
+              <MapPin className="w-6 h-6 text-red-600 flex-shrink-0 mt-1" />
               <div>
-                <p className="text-xl font-semibold text-white mb-2">Mina Clavero</p>
+                <p className="text-xl font-semibold text-white mb-2">Villa Dolores</p>
                 <p className="text-lg">Córdoba, Argentina</p>
               </div>
             </div>
 
             <p className="text-lg text-gray-400 leading-relaxed">
-              En el corazón de las sierras cordobesas, Natura se convierte en el epicentro
+              En el corazón de las sierras cordobesas, Republik se convierte en el epicentro
               de las mejores noches. Un lugar único donde la naturaleza y la música se encuentran.
             </p>
 
@@ -30,9 +30,9 @@ export default function Location() {
           </div>
 
           <div className="relative h-[400px] rounded-2xl overflow-hidden border border-red-800/30">
-            <div className="absolute inset-0 bg-gradient-to-br from-red-900/20 to-black/40 z-10" />
+            <div className="absolute inset-0 bg-gradient-to-br from-red-900/10 to-black/10 z-10" />
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3393.7146352565733!2d-65.00402079999998!3d-31.7236893!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x942d2679cc7953e7%3A0xc2092e284b4119f9!2sNatura%20Disco!5e0!3m2!1ses!2sar!4v1767744528983!5m2!1ses!2sar"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13313.907553900615!2d-65.162160410397!3d-31.95168268736582!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x942cd54f5e2bd901%3A0xf3f83e803fb1e645!2sRepublik!5e0!3m2!1ses!2sar!4v1769476097620!5m2!1ses!2sar"
               width="100%"
               height="100%"
               allowFullScreen

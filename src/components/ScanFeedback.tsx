@@ -88,7 +88,7 @@ export default function ScanFeedback({
       {/* LOADING STATE */}
       {status === "loading" && (
         <div className="flex flex-col items-center gap-4">
-          <div className="h-16 w-16 animate-spin rounded-full border-4 border-white/20 border-t-red-500" />
+          <div className="h-16 w-16 animate-spin rounded-full border-4 border-white/20 border-t-red-600" />
           <p className="text-xl font-bold text-white tracking-widest uppercase">Verificando...</p>
         </div>
       )}

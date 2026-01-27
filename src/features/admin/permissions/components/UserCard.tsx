@@ -63,8 +63,8 @@ export default function UserCard({ user }: UserCardProps) {
     }
     return (
         <div
-            className="group relative overflow-hidden rounded-2xl border border-white/10 bg-zinc-900/50 p-6 transition-all hover:border-red-500/30 hover:bg-zinc-900">
-            <div className="absolute inset-0 bg-gradient-to-br from-red-500/5 via-transparent to-transparent opacity-0 transition-opacity group-hover:opacity-100" />
+            className="group relative overflow-hidden rounded-2xl border border-white/10 bg-zinc-900/50 p-6 transition-all hover:border-red-600/30 hover:bg-zinc-900">
+            <div className="absolute inset-0 bg-gradient-to-br from-red-600/5 via-transparent to-transparent opacity-0 transition-opacity group-hover:opacity-100" />
 
             <div className="relative z-10 flex items-start justify-between">
                 <div className="flex gap-4">
@@ -97,7 +97,7 @@ export default function UserCard({ user }: UserCardProps) {
                     {/* 4. UPDATE TRASH BUTTON */}
                     <button
                         onClick={handleOpenDelete}
-                        className="rounded p-1.5 text-zinc-400 hover:bg-red-500/10 hover:text-red-400"
+                        className="rounded p-1.5 text-zinc-400 hover:bg-red-600/10 hover:text-red-400"
                     >
                         <Trash2 className="h-4 w-4" />
                     </button>

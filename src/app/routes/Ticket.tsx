@@ -53,9 +53,9 @@
 //       const blob = await generateTicketImage();
 //       if (blob && navigator.share && navigator.canShare && navigator.canShare({ files: [new File([blob], "ticket.png", { type: blob.type })] })) {
 //         const file = new File([blob], "ticket.png", { type: blob.type });
-//         await navigator.share({ title: 'Mi Entrada - Natura', text: 'Aquí está mi entrada para Natura Night Club.', files: [file] });
+//         await navigator.share({ title: 'Mi Entrada - Republik', text: 'Aquí está mi entrada para Republik Night Club.', files: [file] });
 //       } else if (navigator.share) {
-//         await navigator.share({ title: 'Mi Entrada - Natura', url: window.location.href });
+//         await navigator.share({ title: 'Mi Entrada - Republik', url: window.location.href });
 //       } else {
 //         await navigator.clipboard.writeText(window.location.href);
 //         alert("Enlace copiado al portapapeles");
@@ -88,9 +88,9 @@
 //     };
 
 //     return {
-//       container: "bg-black border-red-500/50",
-//       glowBg: "bg-red-500/30",
-//       badge: "bg-red-500/10 text-red-400 border-red-500/20",
+//       container: "bg-black border-red-600/50",
+//       glowBg: "bg-red-600/30",
+//       badge: "bg-red-600/10 text-red-400 border-red-600/20",
 //       statusText: "ACCESO VÁLIDO",
 //       icon: <CheckCircle2 className="h-4 w-4 animate-pulse" />,
 //       qrColor: "#10b981"
@@ -233,7 +233,7 @@
 // function LoadingState() {
 //   return (
 //     <div className="min-h-screen bg-zinc-950 flex items-center justify-center">
-//       <div className="w-8 h-8 border-2 border-red-500 border-t-transparent rounded-full animate-spin" />
+//       <div className="w-8 h-8 border-2 border-red-600 border-t-transparent rounded-full animate-spin" />
 //     </div>
 //   );
 // }
@@ -293,9 +293,9 @@ export default function TicketPage() {
       const blob = await generateTicketImage();
       if (blob && navigator.share && navigator.canShare && navigator.canShare({ files: [new File([blob], "ticket.png", { type: blob.type })] })) {
         const file = new File([blob], "ticket.png", { type: blob.type });
-        await navigator.share({ title: 'Mi Entrada - Natura', text: 'Aquí está mi entrada para Natura Night Club.', files: [file] });
+        await navigator.share({ title: 'Mi Entrada - Republik', text: 'Aquí está mi entrada para Republik Night Club.', files: [file] });
       } else if (navigator.share) {
-        await navigator.share({ title: 'Mi Entrada - Natura', url: window.location.href });
+        await navigator.share({ title: 'Mi Entrada - Republik', url: window.location.href });
       } else {
         await navigator.clipboard.writeText(window.location.href);
         alert("Enlace copiado al portapapeles");
@@ -328,9 +328,9 @@ export default function TicketPage() {
     };
 
     return {
-      container: "bg-black border-red-500/50",
-      glowBg: "bg-red-500/30",
-      badge: "bg-red-500/10 text-red-400 border-red-500/20",
+      container: "bg-black border-red-600/50",
+      glowBg: "bg-red-600/30",
+      badge: "bg-red-600/10 text-red-400 border-red-600/20",
       statusText: "ACCESO VÁLIDO",
       icon: <CheckCircle2 className="h-4 w-4 animate-pulse" />,
       qrColor: "#10b981"
@@ -503,7 +503,7 @@ export default function TicketPage() {
 function LoadingState() {
   return (
     <div className="min-h-screen bg-zinc-950 flex items-center justify-center">
-      <div className="w-8 h-8 border-2 border-red-500 border-t-transparent rounded-full animate-spin" />
+      <div className="w-8 h-8 border-2 border-red-600 border-t-transparent rounded-full animate-spin" />
     </div>
   );
 }

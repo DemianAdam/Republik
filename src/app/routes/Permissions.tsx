@@ -31,12 +31,12 @@ export default function Permissions() {
         <div className="mb-8 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
           <div>
             <h1 className="text-2xl font-bold text-white sm:text-3xl">Permisos</h1>
-            <p className="mt-1 text-sm text-zinc-400">Administra quién tiene acceso al panel de Natura.</p>
+            <p className="mt-1 text-sm text-zinc-400">Administra quién tiene acceso al panel de Republik.</p>
           </div>
           <div className="flex gap-3">
             <button
               onClick={handleOpenCreate}
-              className="flex items-center gap-2 rounded-lg bg-red-600 px-4 py-2 text-sm font-medium text-white hover:bg-red-500 transition-colors shadow-lg shadow-red-900/20"
+              className="flex items-center gap-2 rounded-lg bg-red-600 px-4 py-2 text-sm font-medium text-white hover:bg-red-600 transition-colors shadow-lg shadow-red-900/20"
             >
               <Plus className="h-4 w-4" />
               Nuevo Usuario

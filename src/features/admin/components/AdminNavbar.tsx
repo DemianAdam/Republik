@@ -34,8 +34,8 @@ export default function AdminNavbar({ user }: AdminNavbarProps) {
         <div className="flex items-center gap-2">
           <Link to="/admin" className="flex items-center gap-2 group">
             <img
-              src="/NaturaLogoBlancoTransparente.webp"
-              alt="Natura Admin"
+              src="/logoRepublikTransparente.webp"
+              alt="Republik Admin"
               className="h-8 w-auto opacity-90 group-hover:opacity-100 transition-opacity"
             />
             <span className={`hidden sm:block text-xs font-medium tracking-[0.2em] ${roleStyle.style.textColor} uppercase`}>
@@ -114,7 +114,7 @@ export default function AdminNavbar({ user }: AdminNavbarProps) {
                     <Link
                       to="/admin/permissions"
                       onClick={() => setIsMenuOpen(false)}
-                      className="flex w-full items-center gap-2 px-4 py-3 text-sm text-zinc-400 hover:bg-white/5 hover:text-red-500 transition-colors"
+                      className="flex w-full items-center gap-2 px-4 py-3 text-sm text-zinc-400 hover:bg-white/5 hover:text-red-600 transition-colors"
                     >
                       <Shield className="h-4 w-4" />
                       Permisos

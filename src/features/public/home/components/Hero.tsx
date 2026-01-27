@@ -24,8 +24,8 @@ const navigate = useNavigate(); // 2. Initialize hook
       <div className="relative h-full z-10 flex flex-col items-center px-6 text-center">
         <div className="animate-fade-in-up mb-8">
           <img
-            src="NaturaLogoBlancoTransparente.webp"
-            alt="Natura"
+            src="logoRepublikTransparente.webp"
+            alt="Republik"
             className="h-39 w-48 md:h-55 md:w-72 object-contain mx-auto drop-shadow-[0_0_15px_rgba(255,255,255,0.3)]"
             fetchpriority='low'
             loading='lazy'
@@ -43,7 +43,7 @@ const navigate = useNavigate(); // 2. Initialize hook
         <div className="animate-fade-in-up animation-delay-600 flex flex-col sm:flex-row gap-4">
           <button
             onClick={() => navigate('self-check-in')} // 3. Use navigate on button click
-            className="group relative px-10 py-4 bg-red-500 hover:bg-red-600 text-white text-lg font-semibold rounded-full transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-red-500/50"
+            className="group relative px-10 py-4 bg-red-600 hover:bg-red-600 text-white text-lg font-semibold rounded-full transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-red-600/50"
           >
             Anotate
             <span className="absolute inset-0 rounded-full bg-white opacity-0 group-hover:opacity-10 transition-opacity" />

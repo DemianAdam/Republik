@@ -125,17 +125,17 @@ export default function Dashboard() {
           <div className="flex justify-center flex-row gap-3 sm:flex-row sm:items-center">
 
           <PermissionGuard requiredPermission={PERMISSIONS.SETINSIDE_PERSON} orCondition={user.role === "admin"}>
-            <button onClick={handleOpenScanner} className="flex items-center justify-center rounded-lg border border-white/10 p-2.5 text-zinc-400 transition-colors hover:bg-red-500/10 hover:text-red-500" title="Resetear">
+            <button onClick={handleOpenScanner} className="flex items-center justify-center rounded-lg border border-white/10 p-2.5 text-zinc-400 transition-colors hover:bg-red-600/10 hover:text-red-600" title="Resetear">
               <ScanQrCode className = "h-5 w-5" />
             </button>
           </PermissionGuard>
 
           <RoleGuard requiredRole={ROLES_ENUM.RRPP}>
             <div className="flex gap-3 sm:w-auto">
-              <button onClick={handleOpenReset} className="flex items-center justify-center rounded-lg border border-white/10 p-2.5 text-zinc-400 transition-colors hover:bg-red-500/10 hover:text-red-500" title="Resetear">
+              <button onClick={handleOpenReset} className="flex items-center justify-center rounded-lg border border-white/10 p-2.5 text-zinc-400 transition-colors hover:bg-red-600/10 hover:text-red-600" title="Resetear">
                 <RotateCcw className="h-5 w-5" />
               </button>
-              <button onClick={handleOpenCreate} className="rounded-lg bg-red-600 px-4 py-2 text-sm font-medium text-white shadow-lg shadow-red-900/20 transition-colors hover:bg-red-500">
+              <button onClick={handleOpenCreate} className="rounded-lg bg-red-600 px-4 py-2 text-sm font-medium text-white shadow-lg shadow-red-900/20 transition-colors hover:bg-red-600">
                 + Nuevo Invitado
               </button>
             </div>

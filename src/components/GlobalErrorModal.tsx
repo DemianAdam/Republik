@@ -28,8 +28,8 @@ export default function GlobalErrorModal() {
             <X className="h-5 w-5" />
           </button>
 
-          <div className="rounded-full bg-red-500/10 p-3 ring-1 ring-red-500/20">
-            <AlertTriangle className="h-8 w-8 text-red-500" />
+          <div className="rounded-full bg-red-600/10 p-3 ring-1 ring-red-600/20">
+            <AlertTriangle className="h-8 w-8 text-red-600" />
           </div>
 
           <div className="space-y-2">
@@ -51,7 +51,7 @@ export default function GlobalErrorModal() {
               <span className="text-[10px] uppercase tracking-wider text-zinc-600 font-bold">
                 Código de Error
               </span>
-              {copied && <span className="text-[10px] text-red-500">Copiado</span>}
+              {copied && <span className="text-[10px] text-red-600">Copiado</span>}
             </div>
             <div className="flex items-center justify-between gap-2">
               <code className="font-mono text-xs text-red-400 break-all">

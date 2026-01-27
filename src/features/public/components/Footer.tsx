@@ -36,13 +36,13 @@ export default function Footer() {
           <div className="space-y-4">
             <Link to="/" onClick={scrollToTop}>
                 <img
-                src="/NaturaLogoBlancoTransparente.webp"
-                alt="Natura"
+                src="/logoRepublikTransparente.webp"
+                alt="Republik"
                 className="h-20 w-36 object-contain cursor-pointer"
                 />
             </Link>
             <p className="text-gray-400">
-              El night club que fusiona naturaleza y música en el corazón de Mina Clavero.
+              El night club que fusiona naturaleza y música en el corazón de Villa Dolores.
             </p>
           </div>
 
@@ -55,7 +55,7 @@ export default function Footer() {
                 <Link 
                   to="/#events" 
                   onClick={(e) => handleScrollLink(e, '#events')}
-                  className="hover:text-red-500 transition-colors cursor-pointer"
+                  className="hover:text-red-600 transition-colors cursor-pointer"
                 >
                   Eventos
                 </Link>
@@ -64,13 +64,13 @@ export default function Footer() {
                 <Link 
                   to="/#location" 
                   onClick={(e) => handleScrollLink(e, '#location')}
-                  className="hover:text-red-500 transition-colors cursor-pointer"
+                  className="hover:text-red-600 transition-colors cursor-pointer"
                 >
                   Ubicación
                 </Link>
               </li>
               <li>
-                <Link to="/contact" onClick={scrollToTop} className="hover:text-red-500 transition-colors">
+                <Link to="/contact" onClick={scrollToTop} className="hover:text-red-600 transition-colors">
                   Reservas
                 </Link>
               </li>
@@ -82,7 +82,7 @@ export default function Footer() {
             <h3 className="text-white font-semibold mb-4 text-lg">Seguinos</h3>
             <div className="flex gap-4">
               <a
-                href="https://www.instagram.com/naturamina/"
+                href="https://www.instagram.com/republik.vd/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center justify-center w-12 h-12 rounded-full bg-red-900/30 hover:bg-red-600 text-white transition-all duration-300 hover:scale-110"
@@ -107,7 +107,7 @@ export default function Footer() {
         </div>
 
         <div className="pt-8 border-t border-red-900/30 text-center text-gray-500 text-sm">
-          <p>© {new Date().getFullYear()} Natura Night Club - Mina Clavero, Córdoba</p>
+          <p>© {new Date().getFullYear()} Republik Night Club - Villa Dolores, Córdoba</p>
         </div>
       </div>
     </footer>

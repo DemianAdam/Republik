@@ -75,7 +75,7 @@ export default function UserFormModal({
                 name="name"
                 value={createUser.name}
                 onChange={(e) => setCreateUser({ ...createUser, name: e.target.value })}
-                className="w-full rounded-xl border border-white/10 bg-black/20 py-3 pl-10 pr-4 text-white placeholder-zinc-600 focus:border-red-500 focus:outline-none focus:ring-1 focus:ring-red-500 transition-all"
+                className="w-full rounded-xl border border-white/10 bg-black/20 py-3 pl-10 pr-4 text-white placeholder-zinc-600 focus:border-red-600 focus:outline-none focus:ring-1 focus:ring-red-600 transition-all"
                 placeholder="Ej. Sofia Martinez"
               />
             </div>
@@ -85,7 +85,7 @@ export default function UserFormModal({
           <div className="space-y-2">
             <label className="text-sm font-medium text-zinc-400">Permisos</label>
             <div className="relative">
-              <Shield className={`absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 z-10 ${createUser.role === ROLES_ENUM.ADMIN ? "text-red-500" : "text-zinc-500"}`} />
+              <Shield className={`absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 z-10 ${createUser.role === ROLES_ENUM.ADMIN ? "text-red-600" : "text-zinc-500"}`} />
 
 
               <select
@@ -118,8 +118,8 @@ export default function UserFormModal({
                 type="email"
                 value={createUser.email}
                 onChange={(e) => setCreateUser({ ...createUser, email: e.target.value })}
-                className="w-full rounded-xl border border-white/10 bg-black/20 py-3 pl-10 pr-4 text-white placeholder-zinc-600 focus:border-red-500 focus:outline-none focus:ring-1 focus:ring-red-500 transition-all"
-                placeholder="sofia@natura.com"
+                className="w-full rounded-xl border border-white/10 bg-black/20 py-3 pl-10 pr-4 text-white placeholder-zinc-600 focus:border-red-600 focus:outline-none focus:ring-1 focus:ring-red-600 transition-all"
+                placeholder="sofia@Republik.com"
               />
             </div>
           </div>
@@ -140,7 +140,7 @@ export default function UserFormModal({
                 type={showPassword ? "text" : "password"}
                 value={createUser.password}
                 onChange={(e) => setCreateUser({ ...createUser, password: e.target.value })}
-                className="w-full rounded-xl border border-white/10 bg-black/20 py-3 pl-10 pr-10 text-white placeholder-zinc-600 focus:border-red-500 focus:outline-none focus:ring-1 focus:ring-red-500 transition-all"
+                className="w-full rounded-xl border border-white/10 bg-black/20 py-3 pl-10 pr-10 text-white placeholder-zinc-600 focus:border-red-600 focus:outline-none focus:ring-1 focus:ring-red-600 transition-all"
                 placeholder={isUpdating ? "••••••••" : "Asignar contraseña temporal"}
               />
 
@@ -158,7 +158,7 @@ export default function UserFormModal({
           {/* Submit Button */}
           <button
             type="submit"
-            className="w-full mt-4 rounded-xl bg-red-600 py-3.5 font-semibold text-white shadow-lg shadow-red-900/20 transition-all hover:bg-red-500 hover:scale-[1.02] active:scale-[0.98]"
+            className="w-full mt-4 rounded-xl bg-red-600 py-3.5 font-semibold text-white shadow-lg shadow-red-900/20 transition-all hover:bg-red-600 hover:scale-[1.02] active:scale-[0.98]"
           >
             {isLoading && <Loader2 className="h-4 w-4 animate-spin" />}
             {isUpdating ? "Guardar Cambios" : "Crear Usuario"}

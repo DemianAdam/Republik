@@ -15,7 +15,7 @@ export const createAdminUser = internalAction({
                 password: "12345678",
                 //my custom field in schema
                 role: "admin",
-                name: "Administrador Natura"
+                name: "Administrador Republik"
             }
         }
         // @ts-expect-error accessing Convex internal handler

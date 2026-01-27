@@ -10,14 +10,14 @@ export default function AdminAuth() {
 
   return (
     // 1. Main Container: Deep dark background
-    <div className="relative min-h-screen w-full bg-zinc-950 text-white overflow-hidden selection:bg-red-500/30">
+    <div className="relative min-h-screen w-full bg-zinc-950 text-white overflow-hidden selection:bg-red-600/30">
 
       {/* 2. Background Effects (Fixed position to stay while scrolling) */}
       <div className="pointer-events-none fixed inset-0 z-0">
 
         {/* Deep red Glow - Bottom Right */}
         <div className="absolute inset-0 opacity-5">
-          <div className="absolute top-0 left-0 w-96 h-96 bg-red-500 rounded-full blur-3xl" />
+          <div className="absolute top-0 left-0 w-96 h-96 bg-red-600 rounded-full blur-3xl" />
           <div className="absolute bottom-0 right-0 w-96 h-96 bg-red-700 rounded-full blur-3xl" />
         </div>
       </div>

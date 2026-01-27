@@ -49,14 +49,14 @@ export default function Contact() {
             {/* NEW: Back Button */}
             <Link
               to="/"
-              className="inline-flex items-center text-gray-400 hover:text-red-500 transition-colors mb-8 group"
+              className="inline-flex items-center text-gray-400 hover:text-red-600 transition-colors mb-8 group"
             >
               <ChevronLeft className="w-5 h-5 mr-1 group-hover:-translate-x-1 transition-transform" />
               <span className="text-sm font-medium">Volver al inicio</span>
             </Link>
 
             <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Contacto <span className="text-red-500">Natura</span>
+              Contacto <span className="text-red-600">Republik</span>
             </h1>
             <p className="text-gray-200 text-lg mb-8 font-light leading-relaxed">
               Reserva tu mesa VIP, consulta por eventos privados o simplemente déjanos tu mensaje. La noche te espera.
@@ -64,22 +64,22 @@ export default function Contact() {
 
             <div className="space-y-6">
               <div className="flex items-center gap-4 text-gray-200 group">
-                <div className="p-3 bg-red-900/40 border border-red-500/20 rounded-full text-red-400 backdrop-blur-md group-hover:bg-red-500 group-hover:text-black transition-all duration-300">
+                <div className="p-3 bg-red-900/40 border border-red-600/20 rounded-full text-red-400 backdrop-blur-md group-hover:bg-red-600 group-hover:text-black transition-all duration-300">
                   <Phone className="w-5 h-5" />
                 </div>
                 <span className="font-medium group-hover:text-red-400 transition-colors">+54 9 3544 12-3456</span>
               </div>
               <div className="flex items-center gap-4 text-gray-200 group">
-                <div className="p-3 bg-red-900/40 border border-red-500/20 rounded-full text-red-400 backdrop-blur-md group-hover:bg-red-500 group-hover:text-black transition-all duration-300">
+                <div className="p-3 bg-red-900/40 border border-red-600/20 rounded-full text-red-400 backdrop-blur-md group-hover:bg-red-600 group-hover:text-black transition-all duration-300">
                   <Mail className="w-5 h-5" />
                 </div>
-                <span className="font-medium group-hover:text-red-400 transition-colors">reservas@natura.com</span>
+                <span className="font-medium group-hover:text-red-400 transition-colors">reservas@Republik.com</span>
               </div>
               <div className="flex items-center gap-4 text-gray-200 group">
-                <div className="p-3 bg-red-900/40 border border-red-500/20 rounded-full text-red-400 backdrop-blur-md group-hover:bg-red-500 group-hover:text-black transition-all duration-300">
+                <div className="p-3 bg-red-900/40 border border-red-600/20 rounded-full text-red-400 backdrop-blur-md group-hover:bg-red-600 group-hover:text-black transition-all duration-300">
                   <MapPin className="w-5 h-5" />
                 </div>
-                <span className="font-medium group-hover:text-red-400 transition-colors">Av. Costanera 1234, Mina Clavero</span>
+                <span className="font-medium group-hover:text-red-400 transition-colors">Av. Costanera 1234, Villa Dolores</span>
               </div>
             </div>
           </div>
@@ -88,25 +88,25 @@ export default function Contact() {
           <form onSubmit={handleSumbit} className="bg-black/40 p-8 rounded-3xl border border-white/10 backdrop-blur-md shadow-2xl space-y-5">
             <div className="grid grid-cols-2 gap-4">
               <div className="space-y-2">
-                <label className="text-xs font-bold text-red-500 uppercase tracking-wider ml-1">Nombre</label>
-                <input name='name' type="text" className="w-full bg-white/5 border border-white/10 rounded-xl p-3 text-white focus:border-red-500 focus:bg-white/10 outline-none transition-all placeholder:text-gray-500/50" placeholder="Tu nombre" />
+                <label className="text-xs font-bold text-red-600 uppercase tracking-wider ml-1">Nombre</label>
+                <input name='name' type="text" className="w-full bg-white/5 border border-white/10 rounded-xl p-3 text-white focus:border-red-600 focus:bg-white/10 outline-none transition-all placeholder:text-gray-500/50" placeholder="Tu nombre" />
               </div>
               <div className="space-y-2">
-                <label className="text-xs font-bold text-red-500 uppercase tracking-wider ml-1">Apellido</label>
-                <input name='lastName' type="text" className="w-full bg-white/5 border border-white/10 rounded-xl p-3 text-white focus:border-red-500 focus:bg-white/10 outline-none transition-all placeholder:text-gray-500/50" placeholder="Tu apellido" />
+                <label className="text-xs font-bold text-red-600 uppercase tracking-wider ml-1">Apellido</label>
+                <input name='lastName' type="text" className="w-full bg-white/5 border border-white/10 rounded-xl p-3 text-white focus:border-red-600 focus:bg-white/10 outline-none transition-all placeholder:text-gray-500/50" placeholder="Tu apellido" />
               </div>
             </div>
 
             <div className="space-y-2">
-              <label className="text-xs font-bold text-red-500 uppercase tracking-wider ml-1">Email</label>
-              <input name='email' type="email" className="w-full bg-white/5 border border-white/10 rounded-xl p-3 text-white focus:border-red-500 focus:bg-white/10 outline-none transition-all placeholder:text-gray-500/50" placeholder="ejemplo@email.com" />
+              <label className="text-xs font-bold text-red-600 uppercase tracking-wider ml-1">Email</label>
+              <input name='email' type="email" className="w-full bg-white/5 border border-white/10 rounded-xl p-3 text-white focus:border-red-600 focus:bg-white/10 outline-none transition-all placeholder:text-gray-500/50" placeholder="ejemplo@email.com" />
             </div>
             <div className="space-y-2">
-              <label className="text-xs font-bold text-red-500 uppercase tracking-wider ml-1">Mensaje</label>
-              <textarea name='message' rows={4} className="w-full bg-white/5 border border-white/10 rounded-xl p-3 text-white focus:border-red-500 focus:bg-white/10 outline-none transition-all placeholder:text-gray-500/50 resize-none" placeholder="¿En qué podemos ayudarte?"></textarea>
+              <label className="text-xs font-bold text-red-600 uppercase tracking-wider ml-1">Mensaje</label>
+              <textarea name='message' rows={4} className="w-full bg-white/5 border border-white/10 rounded-xl p-3 text-white focus:border-red-600 focus:bg-white/10 outline-none transition-all placeholder:text-gray-500/50 resize-none" placeholder="¿En qué podemos ayudarte?"></textarea>
             </div>
 
-            <button className="w-full bg-red-600 hover:bg-red-700 text-white font-bold py-4 rounded-xl transition-all shadow-lg hover:shadow-red-500/25 hover:scale-[1.02] active:scale-[0.98]">
+            <button className="w-full bg-red-600 hover:bg-red-700 text-white font-bold py-4 rounded-xl transition-all shadow-lg hover:shadow-red-600/25 hover:scale-[1.02] active:scale-[0.98]">
               Enviar Mensaje
             </button>
 

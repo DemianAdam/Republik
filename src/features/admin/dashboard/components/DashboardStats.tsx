@@ -9,9 +9,9 @@ export default function DashboardStats() {
       label: "Total Invitados",
       value: getPersonsCounter?.total ?? 0,
       icon: Users,
-      color: "text-red-500",
-      bg: "bg-red-500/10",
-      border: "group-hover:border-red-500/30",
+      color: "text-red-600",
+      bg: "bg-red-600/10",
+      border: "group-hover:border-red-600/30",
     },
     {
       label: "Confirmados",

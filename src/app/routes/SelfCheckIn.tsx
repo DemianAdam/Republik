@@ -96,7 +96,7 @@ export default function SelfCheckIn() {
 
         {/* Icon Graphic */}
         <div className="relative mb-8 animate-pulse">
-          <div className="absolute inset-0 bg-red-500/20 blur-3xl rounded-full" />
+          <div className="absolute inset-0 bg-red-600/20 blur-3xl rounded-full" />
           {/* Added bg-zinc-900 to ensure the box isn't transparent */}
           <div className="relative flex h-32 w-32 items-center justify-center rounded-[2rem] bg-zinc-900 bg-gradient-to-br from-zinc-800 to-zinc-900 border border-white/10 shadow-2xl">
             <ScanLine className="h-16 w-16 text-red-400" />
@@ -130,8 +130,8 @@ export default function SelfCheckIn() {
             </span>
           </button>
 
-          <div className="inline-flex items-center justify-center gap-2 px-4 py-1.5 rounded-full bg-black/60 border border-red-500/20 text-xs text-zinc-300 font-medium uppercase tracking-widest backdrop-blur-md">
-            <div className="h-1.5 w-1.5 rounded-full bg-red-500 shadow-[0_0_10px_#10b981]" />
+          <div className="inline-flex items-center justify-center gap-2 px-4 py-1.5 rounded-full bg-black/60 border border-red-600/20 text-xs text-zinc-300 font-medium uppercase tracking-widest backdrop-blur-md">
+            <div className="h-1.5 w-1.5 rounded-full bg-red-600 shadow-[0_0_10px_#10b981]" />
             SECURE SYSTEM
           </div>
         </div>
@@ -150,7 +150,7 @@ export default function SelfCheckIn() {
           value={vipCode ?? ""}
           onChange={(e) => setVipCode(e.target.value)}
           placeholder="Ingresar código VIP"
-          className="w-full rounded-xl bg-zinc-900 border border-white/10 px-4 py-3 text-white placeholder:text-zinc-500 focus:outline-none focus:ring-2 focus:ring-red-500/60 focus:border-red-500 transition"
+          className="w-full rounded-xl bg-zinc-900 border border-white/10 px-4 py-3 text-white placeholder:text-zinc-500 focus:outline-none focus:ring-2 focus:ring-red-600/60 focus:border-red-600 transition"
         />
       </div>*/}
 
