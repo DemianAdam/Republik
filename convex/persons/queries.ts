@@ -5,7 +5,7 @@ import { VALID_ROLES } from "../users/permissions";
 import { ConvexError, v } from "convex/values";
 import { stream } from "convex-helpers/server/stream"; // Import stream
 import schema from "../schema";
-import { getCounters } from "../counter";
+import { getCounters } from "./counter";
 import { ERROR_CODES } from "../helpers/errors";
 
 

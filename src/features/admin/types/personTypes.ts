@@ -3,7 +3,8 @@ import { WithoutSystemFields } from "convex/server";
 export type Person = Doc<"persons">;
 export type CreateQrPersonInfo = {
   qrData: string,
-  vipCode?: string | undefined
+  userId: Id<"users">,
+  vipCode?: string | undefined,
 }
 export type CreateQrPerson = {
   fullname: string,

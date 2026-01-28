@@ -42,7 +42,7 @@ const navigate = useNavigate(); // 2. Initialize hook
 
         <div className="animate-fade-in-up animation-delay-600 flex flex-col sm:flex-row gap-4">
           <button
-            onClick={() => navigate('self-check-in')} // 3. Use navigate on button click
+            onClick={() => navigate('check-in')} // 3. Use navigate on button click
             className="group relative px-10 py-4 bg-red-600 hover:bg-red-600 text-white text-lg font-semibold rounded-full transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-red-600/50"
           >
             Anotate

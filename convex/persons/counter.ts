@@ -1,6 +1,6 @@
 import { ShardedCounter } from "@convex-dev/sharded-counter";
-import { components } from "./_generated/api";
-import { MutationCtx, QueryCtx } from "./_generated/server";
+import { components } from "../_generated/api";
+import { MutationCtx, QueryCtx } from "../_generated/server";
 
 const personCounter = new ShardedCounter(components.shardedCounter, {
     // optional: tune shards if you expect very high write throughput

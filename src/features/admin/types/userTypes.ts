@@ -11,6 +11,7 @@ export const emptyCreateUser: CreateUser = {
     password: "",
     email: "",
     name: "",
+    userName: "",
     role: VALID_ROLES.RRPP,
 }
 

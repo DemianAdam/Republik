@@ -32,7 +32,8 @@ export default function UserFormModal({
       email: user.email,
       role: user.role,
       name: user.name,
-      password: ""
+      password: "",
+      userName: ""
     } : emptyCreateUser);
 
   }, [user, isOpen]); // isOpen helps reset when reopening
@@ -81,6 +82,22 @@ export default function UserFormModal({
             </div>
           </div>
 
+          {
+            createUser.role === ROLES_ENUM.RRPP && <div className="space-y-2">
+              <label className="text-sm font-medium text-zinc-400">Link QR</label>
+              <div className="relative">
+                <User className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-zinc-500" />
+                <input
+                  required
+                  name="userName"
+                  value={createUser.userName}
+                  onChange={(e) => setCreateUser({ ...createUser, userName: e.target.value })}
+                  className="w-full rounded-xl border border-white/10 bg-black/20 py-3 pl-10 pr-4 text-white placeholder-zinc-600 focus:border-red-600 focus:outline-none focus:ring-1 focus:ring-red-600 transition-all"
+                  placeholder="Ej. MatiQR"
+                />
+              </div>
+            </div>
+          }
           {/* Role Selection (Colored Dropdown) */}
           <div className="space-y-2">
             <label className="text-sm font-medium text-zinc-400">Permisos</label>
@@ -94,7 +111,7 @@ export default function UserFormModal({
                 className={`w-full appearance-none rounded-xl border py-3 pl-10 pr-10 font-medium focus:outline-none transition-all cursor-pointer ${roleStyle.style.selectColor}`}
               >
                 {
-                  ROLES.map(role => { 
+                  ROLES.map(role => {
                     const value = ROLE_UI[role]
                     return <option key={role} value={role} className={`bg-zinc-900 ${value.style.textColor}`}>{value.label}</option>
                   })

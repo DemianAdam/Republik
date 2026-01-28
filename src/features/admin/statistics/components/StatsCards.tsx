@@ -1,32 +1,31 @@
 import { Users, CheckCircle2, Clock } from "lucide-react";
-import { useGetPersonsCounters } from "../../hooks/persons/useGetPersonsCounters";
-import { LoadingState } from "components/LoadingState";
 
-export default function DashboardStats() {
-  const countersQuery = useGetPersonsCounters();
+interface StatsCardsProps {
+  total: number;
+  inside: number;
+  outside: number;
+  loading?: boolean;
+}
 
-  if (countersQuery.isError) {
-    //TODO: handle error
-    return <div>Error</div>
-  }
-
-  if (countersQuery.isPending) {
-    //TODO: handle loading
-    return <LoadingState />
-  }
-
+export default function StatsCards({ 
+  total, 
+  inside, 
+  outside, 
+  loading = false 
+}: StatsCardsProps) {
+  
   const stats = [
     {
       label: "Total Invitados",
-      value: countersQuery.data.total,
+      value: total,
       icon: Users,
       color: "text-red-600",
       bg: "bg-red-600/10",
       border: "group-hover:border-red-600/30",
     },
     {
-      label: "Confirmados",
-      value: countersQuery.data.inside,
+      label: "Ingresados",
+      value: inside,
       icon: CheckCircle2,
       color: "text-red-400",
       bg: "bg-red-400/10",
@@ -34,7 +33,7 @@ export default function DashboardStats() {
     },
     {
       label: "Pendientes",
-      value: countersQuery.data.outside,
+      value: outside,
       icon: Clock,
       color: "text-zinc-400",
       bg: "bg-zinc-400/10",
@@ -42,6 +41,15 @@ export default function DashboardStats() {
     },
   ];
 
+  if (loading) {
+    return (
+      <div className="grid grid-cols-1 gap-4 sm:grid-cols-3 mb-8">
+        {[1, 2, 3].map((i) => (
+          <div key={i} className="h-32 rounded-2xl border border-white/10 bg-white/5 animate-pulse" />
+        ))}
+      </div>
+    );
+  }
 
   return (
     <div className="grid grid-cols-1 gap-4 sm:grid-cols-3 mb-8">

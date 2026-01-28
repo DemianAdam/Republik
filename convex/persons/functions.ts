@@ -3,8 +3,9 @@ import { MutationCtx } from "../_generated/server";
 import { personValidator } from "./schema";
 import { WithoutSystemFields } from "convex/server";
 import { Doc } from "../_generated/dataModel";
-import { incrementTotal, incrementOutside } from "../counter";
+import { incrementTotal, incrementOutside } from "./counter";
 import { ERROR_CODES } from "../helpers/errors";
+import { incrementUserOutside, incrementUserTotal } from "../users/counter";
 
 
 export type CreatedPerson = Omit<Doc<"persons">, "_creationTime">
@@ -20,10 +21,15 @@ export async function createPersonFunction(ctx: MutationCtx, args: Infer<typeof 
     if (person) {
         throw new ConvexError(ERROR_CODES.PERSON_ALREADY_CREATED);
     }
-    
+
     const personId = await ctx.db.insert("persons", insert);
+
     await incrementTotal(ctx);
     await incrementOutside(ctx);
+    if (insert.userId) {
+        incrementUserTotal(ctx, insert.userId);
+        incrementUserOutside(ctx, insert.userId);
+    }
     return {
         _id: personId,
         ...insert

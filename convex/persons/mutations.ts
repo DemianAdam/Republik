@@ -3,10 +3,10 @@ import { getCurrentUser, isAdmin, requirePermission } from "../users/functions";
 import { PERMISSIONS } from "../users/permissions";
 import { ConvexError, Infer, v } from "convex/values";
 import { personValidator } from "./schema";
-import { Doc, Id } from "../_generated/dataModel";
+import { Doc } from "../_generated/dataModel";
 import { WithoutSystemFields } from "convex/server";
 import { createPersonFunction, createPersonValidator, getAge, getGuestDataFromQr } from "./functions";
-import { decrementInside, decrementOutside, decrementTotal, incrementInside, incrementOutside } from "../counter";
+import { decrementInside, decrementOutside, decrementTotal, incrementInside, incrementOutside } from "./counter";
 import { ERROR_CODES } from "../helpers/errors";
 import { createLogFunction } from "../errorLogs/functions";
 
@@ -29,7 +29,10 @@ export const createPerson = mutation({
 export const createQrPerson = mutation({
     args: {
         qrData: v.string(),
-        vipCode: v.optional(v.string())
+        /* TODO: vip code Implementation
+        vipCode: v.optional(v.string()), 
+        */
+        userId: v.optional(v.id("users"))
     },
     handler: async (ctx, args) => {
         let person;
@@ -56,7 +59,9 @@ export const createQrPerson = mutation({
             throw new ConvexError(ERROR_CODES.PERSON_UNDER_AGE)
         }
 
-        let isVip: boolean = false;
+        const isVip: boolean = false;
+        /*
+        TODO: Vip code implementation
         let userId: Id<"users"> | undefined
         if (args.vipCode !== undefined) {
             const code = args.vipCode;
@@ -67,13 +72,13 @@ export const createQrPerson = mutation({
             isVip = true;
             userId = vipCode.userId;
             await ctx.db.delete("vipCodes", vipCode._id);
-        }
+        }*/
 
         const argsObj: Infer<typeof createPersonValidator> = {
             fullname: person.fullname,
             dni: person.dni,
             isVip,
-            userId
+            userId: args.userId
         }
 
         return await createPersonFunction(ctx, argsObj);
@@ -112,7 +117,7 @@ export const deletePerson = mutation({
 export const updatePerson = mutation({
     args: {
         personId: v.id("persons"),
-        ...personValidator.omit("isInside","userId","qrCode").fields
+        ...personValidator.omit("isInside", "userId", "qrCode").fields
     },
     handler: async (ctx, args) => {
         const user = await getCurrentUser(ctx);

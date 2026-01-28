@@ -1,4 +1,4 @@
-import { Leaf, Music, PartyPopper, Sparkles } from 'lucide-react';
+import {  Music, PartyPopper, Sparkles } from 'lucide-react';
 
 export default function About() {
   return (

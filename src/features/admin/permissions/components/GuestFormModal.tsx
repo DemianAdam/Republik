@@ -1,4 +1,4 @@
-import { X, User, Star, Loader2 } from "lucide-react";
+import { X, User, Star, Loader2, Hash } from "lucide-react";
 import { useEffect, useState } from "react";
 import { CreatePerson, emptyCreatePerson, Person } from "../../types/personTypes";
 //TODO: handle variants
@@ -68,18 +68,18 @@ export default function GuestFormModal({
             </div>
           </div>
 
-          {/* <div className="space-y-2">
+          {<div className="space-y-2">
             <label className="text-sm font-medium text-zinc-400">DNI / Identificación</label>
             <div className="relative">
               <Hash className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-zinc-500" />
-              <input 
-                value={formData.dni}
-                onChange={(e) => setFormData({ ...formData, dni: e.target.value })}
+              <input
+                value={createPerson.dni}
+                onChange={(e) => setCreatePerson({ ...createPerson, dni: Number(e.target.value) })}
                 className="w-full rounded-xl border border-white/10 bg-black/20 py-3 pl-10 pr-4 text-white placeholder-zinc-600 focus:border-red-600 focus:outline-none focus:ring-1 focus:ring-red-600"
                 placeholder="Ej. 38.123.456"
               />
             </div>
-          </div> */}
+          </div>}
 
           <div
             onClick={() => setCreatePerson({ ...createPerson, isVip: !createPerson.isVip })}

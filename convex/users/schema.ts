@@ -10,9 +10,13 @@ const roleValidator = () => {
 export const userValidator = v.object({
     email: v.string(),
     role: roleValidator(),
-    name: v.string()
+    name: v.string(),
+    userName: v.optional(v.string())
 });
 
 
-export const schema = defineTable(userValidator).index("index_email", ["email"]);
+export const schema = defineTable(userValidator)
+    .index("index_role", ["role"])
+    .index("index_email", ["email"])
+    .index("index_userName", ["userName"]);
 

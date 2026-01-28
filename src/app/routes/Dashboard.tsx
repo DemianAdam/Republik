@@ -4,8 +4,7 @@ import { useCreatePerson } from "features/admin/hooks/persons/useCreatePerson";
 import GuestFormModal from "features/admin/permissions/components/GuestFormModal";
 import { CreatePerson } from "features/admin/types/personTypes";
 import { useState, useCallback } from "react";
-import RoleGuard from "features/admin/components/RoleGuard";
-import { PERMISSIONS, ROLES_ENUM } from "features/admin/types/userTypes";
+import { PERMISSIONS } from "features/admin/types/userTypes";
 import { RotateCcw, ScanQrCode } from "lucide-react";
 import ConfirmDialog from "components/ConfirmDialog";
 import { useDeleteAllPersons } from "features/admin/hooks/persons/useDeleteAllPersons";
@@ -130,7 +129,7 @@ export default function Dashboard() {
             </button>
           </PermissionGuard>
 
-          <RoleGuard requiredRole={ROLES_ENUM.RRPP}>
+          <PermissionGuard requiredPermission={PERMISSIONS.CREATE_PERSON}>
             <div className="flex gap-3 sm:w-auto">
               <button onClick={handleOpenReset} className="flex items-center justify-center rounded-lg border border-white/10 p-2.5 text-zinc-400 transition-colors hover:bg-red-600/10 hover:text-red-600" title="Resetear">
                 <RotateCcw className="h-5 w-5" />
@@ -139,7 +138,7 @@ export default function Dashboard() {
                 + Nuevo Invitado
               </button>
             </div>
-          </RoleGuard>
+          </PermissionGuard>
           </div>
 
 

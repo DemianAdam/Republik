@@ -1,10 +1,11 @@
 import { internalMutation } from "../../_generated/server";
 import { personValidator } from "../schema";
 import { createPersonFunction } from "../functions";
-import { backfill, incrementInside, incrementOutside, incrementTotal } from "../../counter";
+import { backfill, incrementInside, incrementOutside, incrementTotal } from "../counter";
 import { ConvexError } from "convex/values";
 import { WithoutSystemFields } from "convex/server";
-import { Doc } from "../../_generated/dataModel";
+import { Doc, Id } from "../../_generated/dataModel";
+import { backfillUser } from "../../users/counter";
 
 
 
@@ -54,6 +55,8 @@ export const backfillPersonsCounter = internalMutation({
         let inside = 0;
         let outside = 0;
 
+        const perUser: Record<Id<"users">, { total: number; inside: number; outside: number }> = {}
+
         for (const p of persons) {
             total++;
             if (p.isInside) {
@@ -61,9 +64,35 @@ export const backfillPersonsCounter = internalMutation({
             } else {
                 outside++;
             }
+
+            if (!p.userId) {
+                continue;
+            }
+
+            if (!perUser[p.userId]) {
+                perUser[p.userId] = { total: 0, inside: 0, outside: 0 };
+            }
+
+            perUser[p.userId].total++;
+            if (p.isInside) {
+                perUser[p.userId].inside++;
+            }
+            else {
+                perUser[p.userId].outside++;
+            }
         }
 
         await backfill(ctx, total, inside, outside);
+        console.log(perUser);
+
+        for (const [id, { total, inside, outside }] of Object.entries(perUser)) {
+            const userId = id as Id<"users">;
+            console.log(userId);
+            console.log(total, inside, outside);
+
+
+            await backfillUser(ctx, total, inside, outside, userId);
+        }
     }
 });
 

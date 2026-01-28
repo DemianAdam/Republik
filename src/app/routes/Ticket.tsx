@@ -4,6 +4,7 @@ import { QRCodeSVG } from "qrcode.react";
 import { CheckCircle2, Crown, Share2, Download, Hash } from "lucide-react";
 import { toBlob } from "html-to-image";
 import { useValidateQr } from "features/public/hooks/persons/useValidateQr";
+import { LoadingState } from "../../components/LoadingState";
 
 export default function TicketPage() {
   const { uuid } = useParams();
@@ -261,10 +262,3 @@ export default function TicketPage() {
   );
 }
 
-function LoadingState() {
-  return (
-    <div className="min-h-screen bg-zinc-950 flex items-center justify-center">
-      <div className="w-8 h-8 border-2 border-red-600 border-t-transparent rounded-full animate-spin" />
-    </div>
-  );
-}

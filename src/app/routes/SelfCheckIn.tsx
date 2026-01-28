@@ -4,17 +4,23 @@ import QrScanner from "../../components/QrScanner";
 import { getGuestDataFromQr } from "../../helpers";
 import VerificationModal from "components/VerificationModal";
 import { useCreateQrPerson } from "features/public/hooks/persons/useCreateQrPerson";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, Navigate, useNavigate, useParams } from "react-router-dom";
 import { CreateQrPerson } from "features/admin/types/personTypes";
 import { ConvexError } from "convex/values";
 import { ERROR_CODES } from "convex/helpers/errors";
 import { useGetQrByDni } from "features/public/hooks/persons/useGetQrByDni";
 import { BarcodeFormat } from "@zxing/library";
+import { useGetUserByUserName } from "features/public/hooks/users/useGetUserByUserName";
+import { LoadingState } from "components/LoadingState";
 
 export default function SelfCheckIn() {
+  const { userName } = useParams();
+
+  const userQuery = useGetUserByUserName(userName);
+
   const [isScannerOpen, setIsScannerOpen] = useState(false);
   const [person, setPerson] = useState<CreateQrPerson | null>(null);
-  const [vipCode, setVipCode] = useState<string | undefined>(undefined);
+  //const [vipCode, setVipCode] = useState<string | undefined>(undefined);
   const [dniQrData, setDniQrData] = useState<string | undefined>(undefined);
   const [isVerificationModalOpen, setIsVerificationModalOpen] = useState(false);
   const navigate = useNavigate();
@@ -22,6 +28,22 @@ export default function SelfCheckIn() {
 
   const { createQrPersonHandler } = useCreateQrPerson();
   const { getQrByDni } = useGetQrByDni();
+
+  if (!userName) {
+    return <Navigate to="/404" replace />;
+  }
+
+  if (userQuery.isPending) {
+    return <LoadingState />
+  }
+
+  if (userQuery.isError) {
+    return <div>Error</div>;
+  }
+
+  const user = userQuery.data;
+
+  console.log(user)
 
   const handleScanData = (data: string) => {
     const person = getGuestDataFromQr(data);
@@ -39,7 +61,7 @@ export default function SelfCheckIn() {
   const handleConfirm = async () => {
 
     try {
-      const result = await createQrPersonHandler({ qrData: dniQrData!, vipCode: vipCode })
+      const result = await createQrPersonHandler({ qrData: dniQrData!, /*vipCode: vipCode,*/ userId: user._id })
       navigate(`/ticket/${result.qrCode}`);
     } catch (error) {
       //TODO: handle error?

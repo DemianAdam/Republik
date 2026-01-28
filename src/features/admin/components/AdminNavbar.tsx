@@ -1,5 +1,5 @@
 import { useAuthActions } from "@convex-dev/auth/react";
-import { User as UserIcon, Menu, LogOut, X, Shield, LayoutDashboard } from "lucide-react";
+import { User as UserIcon, Menu, LogOut, X, Shield, LayoutDashboard, ChartNoAxesCombined} from "lucide-react";
 import { Link } from "react-router-dom";
 import { useState, useRef, useEffect } from "react";
 import { ROLE_UI, ROLES_ENUM, User } from "features/admin/types/userTypes";
@@ -112,12 +112,24 @@ export default function AdminNavbar({ user }: AdminNavbarProps) {
                   {/* NEW OPTION: Permisos */}
                   {user.role == ROLES_ENUM.ADMIN &&
                     <Link
-                      to="/admin/permissions"
+                      to="/admin/permisos"
                       onClick={() => setIsMenuOpen(false)}
                       className="flex w-full items-center gap-2 px-4 py-3 text-sm text-zinc-400 hover:bg-white/5 hover:text-red-600 transition-colors"
                     >
                       <Shield className="h-4 w-4" />
                       Permisos
+                    </Link>
+                  }
+
+                  {/* NEW OPTION: Estadisticas */}
+                  {(user.role == ROLES_ENUM.ADMIN || ROLES_ENUM.RRPP) &&
+                    <Link
+                      to="/admin/estadisticas"
+                      onClick={() => setIsMenuOpen(false)}
+                      className="flex w-full items-center gap-2 px-4 py-3 text-sm text-zinc-400 hover:bg-white/5 hover:text-red-600 transition-colors"
+                    >
+                      <ChartNoAxesCombined className="h-4 w-4" />
+                      Estadísticas
                     </Link>
                   }
 
