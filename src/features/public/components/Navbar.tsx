@@ -4,7 +4,7 @@ import { asset } from '../../../utils/assets';
 
 export default function Navbar() {
   const location = useLocation();
-  const isContactPage = location.pathname === '/contact';
+  const isContactPage = location.pathname === '/contacto';
 
   const [scrolled, setScrolled] = useState(false);
 

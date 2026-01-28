@@ -71,7 +71,7 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link to="/contact" onClick={scrollToTop} className="hover:text-red-600 transition-colors">
+                <Link to="/contacto" onClick={scrollToTop} className="hover:text-red-600 transition-colors">
                   Reservas
                 </Link>
               </li>
@@ -91,7 +91,7 @@ export default function Footer() {
                 <Instagram className="w-5 h-5" />
               </a>
               <a
-                href="https://api.whatsapp.com/send?phone=5493544624012&text=Hola%20Natura!%20%20%F0%9F%8D%83%20"
+                href="https://chat.whatsapp.com/KjplHDPoKvY6vm9ZBA3Jcn"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center justify-center w-12 h-12 rounded-full bg-red-900/30 hover:bg-red-600 text-white transition-all duration-300 hover:scale-110"
