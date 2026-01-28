@@ -59,4 +59,15 @@ const defaultConfig = {
   }
 }
 
-export default defineConfig(defaultConfig);
+
+const ghPagesConfig = {
+  plugins: [
+    react(),
+    tsconfigPaths()
+  ],
+  optimizeDeps: {
+    include: ['lucide-react'],
+  },
+}
+
+export default defineConfig(ghPagesConfig);
