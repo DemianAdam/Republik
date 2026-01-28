@@ -30,16 +30,12 @@ export default function SelfCheckIn() {
   const { createQrPersonHandler } = useCreateQrPerson();
   const { getQrByDni } = useGetQrByDni();
 
-  if (!userName) {
-    return <Navigate to="/404" replace />;
-  }
-
   if (userQuery.isPending) {
     return <LoadingState />
   }
 
-  if (userQuery.isError) {
-    return <div>Error</div>;
+  if (userName && userQuery.isError) {
+    return <Navigate to="/NotFound" />;
   }
 
   const user = userQuery.data;
@@ -62,7 +58,7 @@ export default function SelfCheckIn() {
   const handleConfirm = async () => {
 
     try {
-      const result = await createQrPersonHandler({ qrData: dniQrData!, /*vipCode: vipCode,*/ userId: user._id })
+      const result = await createQrPersonHandler({ qrData: dniQrData!, /*vipCode: vipCode,*/ userId: user?._id })
       navigate(`/ticket/${result.qrCode}`);
     } catch (error) {
       //TODO: handle error?
@@ -101,26 +97,28 @@ export default function SelfCheckIn() {
         className="absolute inset-0 z-0 h-full w-full object-cover opacity-40"
       />
 
-      {/* 2. Gradient Overlay (Layer 0) - Kept dark to ensure readability */}
+      {/* 2. Gradient Overlay (Layer 0) */}
       <div className="absolute inset-0 z-0 bg-gradient-to-b from-red-950/80 via-black/60 to-black/90" />
 
-      {/* 3. CONTENT WRAPPER (Layer 10) - This fixes the transparency/stacking issue */}
+      {/* --- FIX: MOVED BUTTON HERE (Layer 20) --- */}
+      {/* Moved outside the centered div so it sticks to the top-left of the screen */}
+      <Link
+        to="/"
+        className="absolute top-6 left-6 z-20 flex items-center gap-2 text-sm font-medium text-zinc-400 transition-colors hover:text-white"
+      >
+        <ChevronLeft className="h-4 w-4" />
+        <span className="hidden sm:inline">Volver a la página principal</span>
+        <span className="sm:hidden">Volver</span>
+      </Link>
+
+      {/* 3. CONTENT WRAPPER (Layer 10) */}
       <div className="relative z-10 flex flex-col items-center w-full max-w-md">
 
-        {/* Back Button */}
-        <Link
-          to="/"
-          className="absolute -top-16 left-0 sm:fixed sm:top-6 sm:left-6 flex items-center gap-2 text-sm font-medium text-zinc-400 transition-colors hover:text-white"
-        >
-          <ChevronLeft className="h-4 w-4" />
-          <span className="hidden sm:inline">Volver a la página principal</span>
-          <span className="sm:hidden">Volver</span>
-        </Link>
+        {/* Removed the Link from here */}
 
         {/* Icon Graphic */}
         <div className="relative mb-8 animate-pulse">
           <div className="absolute inset-0 bg-red-600/20 blur-3xl rounded-full" />
-          {/* Added bg-zinc-900 to ensure the box isn't transparent */}
           <div className="relative flex h-32 w-32 items-center justify-center rounded-[2rem] bg-zinc-900 bg-gradient-to-br from-zinc-800 to-zinc-900 border border-white/10 shadow-2xl">
             <ScanLine className="h-16 w-16 text-red-400" />
           </div>
