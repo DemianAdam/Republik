@@ -11,7 +11,7 @@ const convex = new ConvexReactClient(import.meta.env.VITE_CONVEX_URL as string, 
 
 const Router = true ? HashRouter : BrowserRouter;
 
-
+console.log('BASE_URL:', import.meta.env.BASE_URL);
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <ConvexAuthProvider client={convex}>

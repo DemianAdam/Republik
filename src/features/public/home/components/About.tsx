@@ -1,4 +1,5 @@
 import {  Music, PartyPopper, Sparkles } from 'lucide-react';
+import { asset } from '../../../../utils/assets';
 
 export default function About() {
   return (
@@ -51,7 +52,7 @@ export default function About() {
               preload='none'
               className="w-full h-full object-cover"
             >
-              <source src="/About/djInit.mp4" type="video/mp4" />
+              <source src={asset("About/djInit.mp4")} type="video/mp4" />
             </video>
             <div className="absolute inset-0 bg-gradient-to-t from-red-950/20 to-transparent" />
           </div>

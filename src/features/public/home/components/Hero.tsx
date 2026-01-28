@@ -1,4 +1,5 @@
 import { useNavigate } from "react-router-dom";
+import { asset } from "../../../../utils/assets";
 
 interface HeroProps {
   onCTAClick: (section: string) => void;
@@ -11,7 +12,7 @@ const navigate = useNavigate(); // 2. Initialize hook
   return (
     <section className="relative h-svh w-full bg-black pt-32  ">
       <img
-        src="/istockphoto-1466057420-2048x2048.png"
+        src={asset("istockphoto-1466057420-2048x2048.png")}
         aria-hidden="true"
         role="presentation"
         loading="eager"
@@ -24,7 +25,7 @@ const navigate = useNavigate(); // 2. Initialize hook
       <div className="relative h-full z-10 flex flex-col items-center px-6 text-center">
         <div className="animate-fade-in-up mb-8">
           <img
-            src="logoRepublikTransparente.webp"
+            src={asset("logoRepublikTransparente.webp")}
             alt="Republik"
             className="h-39 w-48 md:h-55 md:w-72 object-contain mx-auto drop-shadow-[0_0_15px_rgba(255,255,255,0.3)]"
             fetchpriority='low'

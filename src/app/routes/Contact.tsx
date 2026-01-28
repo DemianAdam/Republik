@@ -3,6 +3,7 @@ import { useMutation } from 'convex/react';
 import { ChevronLeft } from 'lucide-react';
 import { lazy } from 'react';
 import { Link } from 'react-router-dom';
+import { asset } from '../../utils/assets';
 const Mail = lazy(() => import('lucide-react').then(m => ({ default: m.Mail })));
 const Phone = lazy(() => import('lucide-react').then(m => ({ default: m.Phone })));
 const MapPin = lazy(() => import('lucide-react').then(m => ({ default: m.MapPin })));
@@ -33,7 +34,7 @@ export default function Contact() {
       <div
         className="absolute inset-0 bg-cover bg-center opacity-40"
         style={{
-          backgroundImage: 'url("/istockphoto-1466057420-2048x2048.png")',
+          backgroundImage: `url(${asset("istockphoto-1466057420-2048x2048.png")})`,
           backgroundAttachment: 'fixed'
         }}
       />

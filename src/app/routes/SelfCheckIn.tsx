@@ -12,6 +12,7 @@ import { useGetQrByDni } from "features/public/hooks/persons/useGetQrByDni";
 import { BarcodeFormat } from "@zxing/library";
 import { useGetUserByUserName } from "features/public/hooks/users/useGetUserByUserName";
 import { LoadingState } from "components/LoadingState";
+import { asset } from "../../utils/assets";
 
 export default function SelfCheckIn() {
   const { userName } = useParams();
@@ -92,7 +93,7 @@ export default function SelfCheckIn() {
 
       {/* 1. Background Image (Layer 0) */}
       <img
-        src="/istockphoto-1466057420-2048x2048.png"
+        src={asset("istockphoto-1466057420-2048x2048.png")}
         aria-hidden="true"
         role="presentation"
         loading="eager"

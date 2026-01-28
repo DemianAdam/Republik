@@ -1,8 +1,16 @@
+import { asset } from "../../../../utils/assets";
+
 export default function SocialProof() {
   return (
     <section className="relative bg-black py-24 px-6 overflow-hidden">
       <div className="absolute inset-0">
-        <div className="absolute inset-0 bg-[url('/social-proof.webp')] bg-cover bg-center opacity-40" />
+        <div
+          className="absolute inset-0 bg-cover bg-center opacity-40"
+          style={{
+            backgroundImage: `url(${asset('social-proof.webp')})`,
+          }}
+        />
+
       </div>
 
       <div className="relative z-10 max-w-6xl mx-auto text-center space-y-12">

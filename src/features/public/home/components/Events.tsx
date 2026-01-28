@@ -1,4 +1,5 @@
 import { Clock, ArrowRight } from 'lucide-react';
+import { asset } from '../../../../utils/assets';
 
 const events = [
   {
@@ -7,7 +8,7 @@ const events = [
     title: 'Noche de Brujas',
     dj: 'Pili Guzman & Jere Velasco',
     time: '00:00 HS',
-    image: '/Events/event-1.webp',
+    image: asset('Events/event-1.webp'),
     //video: '/Events/event-1.mp4',
     offset: 'object-[50%_7%]'
   },
@@ -17,7 +18,7 @@ const events = [
     title: 'RepubliK | VOL. 1',
     dj: 'BRUNO BALMA',
     time: '00:00 HS',
-    image: '/Events/event-2.webp',
+    image: asset('Events/event-2.webp'),
     //video: '/Events/event-2.mp4',
     offset: 'object-[50%_0%]'
   },
@@ -27,7 +28,7 @@ const events = [
     title: 'RepubliK',
     dj: '2x1 EN TRAGOS',
     time: '00:00 HS',
-    image: '/Events/event-3.webp',
+    image: asset('Events/event-3.webp'),
     //video: '/Events/event-3.mp4',
     offset: 'object-[50%_30%]'
   },

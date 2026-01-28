@@ -3,6 +3,7 @@ import { User as UserIcon, Menu, LogOut, X, Shield, LayoutDashboard, ChartNoAxes
 import { Link } from "react-router-dom";
 import { useState, useRef, useEffect } from "react";
 import { ROLE_UI, ROLES_ENUM, User } from "features/admin/types/userTypes";
+import { asset } from "../../../utils/assets";
 
 interface AdminNavbarProps {
   user: User
@@ -34,7 +35,7 @@ export default function AdminNavbar({ user }: AdminNavbarProps) {
         <div className="flex items-center gap-2">
           <Link to="/admin" className="flex items-center gap-2 group">
             <img
-              src="/logoRepublikTransparente.webp"
+              src={asset("logoRepublikTransparente.webp")}
               alt="Republik Admin"
               className="h-8 w-auto opacity-90 group-hover:opacity-100 transition-opacity"
             />

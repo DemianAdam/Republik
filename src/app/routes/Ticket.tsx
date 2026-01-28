@@ -5,6 +5,7 @@ import { CheckCircle2, Crown, Share2, Download, Hash } from "lucide-react";
 import { toBlob } from "html-to-image";
 import { useValidateQr } from "features/public/hooks/persons/useValidateQr";
 import { LoadingState } from "../../components/LoadingState";
+import { asset } from "../../utils/assets";
 
 export default function TicketPage() {
   const { uuid } = useParams();
@@ -122,7 +123,7 @@ export default function TicketPage() {
       {/* --- BACKGROUND LAYERS --- */}
       {/* 1. Leaves Image (Permanent, handles Grayscale logic) */}
       <img
-        src="/istockphoto-1466057420-2048x2048.png"
+        src={asset("istockphoto-1466057420-2048x2048.png")}
         alt=""
         className={`absolute inset-0 w-full h-full object-cover transition-all duration-1000 ease-in-out z-0
             ${isUsed ? 'grayscale opacity-10' : 'opacity-40'}

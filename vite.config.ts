@@ -68,6 +68,7 @@ const ghPagesConfig = {
   optimizeDeps: {
     include: ['lucide-react'],
   },
+  base: '/Republik/', 
 }
 
 export default defineConfig(ghPagesConfig);

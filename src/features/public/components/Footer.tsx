@@ -1,5 +1,6 @@
 import { Instagram, MessageCircle } from 'lucide-react';
 import { Link, useLocation } from 'react-router-dom'; // 🟢 FIX: Import from react-router-dom
+import { asset } from '../../../utils/assets';
 
 export default function Footer() {
   const location = useLocation();
@@ -36,7 +37,7 @@ export default function Footer() {
           <div className="space-y-4">
             <Link to="/" onClick={scrollToTop}>
                 <img
-                src="/logoRepublikTransparente.webp"
+                src={asset("logoRepublikTransparente.webp")}
                 alt="Republik"
                 className="h-20 w-36 object-contain cursor-pointer"
                 />

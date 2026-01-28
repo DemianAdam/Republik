@@ -1,13 +1,16 @@
+import { asset } from "../../../../utils/assets";
+
 const galleryImages = [
-  '/Gallery/gallery-1.webp',
-  '/Gallery/gallery-2.webp',
-  '/Gallery/gallery-3.webp',
-  '/Gallery/gallery-4.webp',
-  '/Gallery/gallery-5.webp',
-  '/Gallery/gallery-6.webp',
+  asset('Gallery/gallery-1.webp'),
+  asset('Gallery/gallery-2.webp'),
+  asset('Gallery/gallery-3.webp'),
+  asset('Gallery/gallery-4.webp'),
+  asset('Gallery/gallery-5.webp'),
+  asset('Gallery/gallery-6.webp'),
 ];
 
 export default function Gallery() {
+  
   return (
     <section className="relative bg-black py-24 px-6">
       <div className="max-w-7xl mx-auto">
