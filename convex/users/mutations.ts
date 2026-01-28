@@ -4,39 +4,10 @@ import { deleteUserData, getCurrentUser, requirePermission } from "./functions";
 import { userValidator } from "./schema";
 import { Doc } from "../_generated/dataModel";
 import { partial } from "convex-helpers/validators";
-import { createAccount, modifyAccountCredentials } from "@convex-dev/auth/server";
+import { modifyAccountCredentials } from "@convex-dev/auth/server";
 import { WithoutSystemFields } from "convex/server";
 import { PERMISSIONS } from "./permissions";
 
-export const createUser = mutation({
-    args: {
-        ...userValidator.fields,
-        password: v.string(),
-    },
-    /* eslint-disable */
-    handler: async (ctx: any, args) => {
-        /* eslint-enable */
-        const currentUser = await getCurrentUser(ctx);
-        requirePermission(currentUser, PERMISSIONS.MANAGE_USERS)
-
-        const newUser = await createAccount(ctx, {
-            provider: "password",
-            account: {
-                id: args.email,
-                secret: args.password,
-            },
-            profile: {
-                email: args.email,
-                role: args.role,
-                name: args.name
-            },
-            shouldLinkViaEmail: false,
-            shouldLinkViaPhone: false,
-        });
-
-        return newUser;
-    }
-});
 
 export const deleteUser = mutation({
     args: {

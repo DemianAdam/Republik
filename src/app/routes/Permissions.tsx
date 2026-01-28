@@ -1,14 +1,14 @@
 import { useState } from "react";
 import { CreateUser } from "features/admin/types/userTypes";
-import { useCreateUser } from "features/admin/hooks/users/useCreateUser";
 import { Plus } from "lucide-react";
 import UserFormModal from "features/admin/permissions/components/UserFormModal";
 import { useGetAllUsers } from "features/admin/hooks/users/useGetAllUsersPaginated";
 import UserCard from "features/admin/permissions/components/UserCard";
+import { useAuthActions } from "@convex-dev/auth/react";
 
 export default function Permissions() {
   const queryGetAllUsers = useGetAllUsers();
-  const { createUserHandler } = useCreateUser();
+  const { signIn } = useAuthActions();
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isLoading, setIsLoading] = useState(false)
 
@@ -17,7 +17,7 @@ export default function Permissions() {
   const handleSubmit = async (user: CreateUser) => {
     setIsLoading(true)
     try {
-      await createUserHandler(user);
+      await signIn("password", { ...user, flow: "signUp" });
     }
     finally {
       setIsModalOpen(false);

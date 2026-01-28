@@ -46,7 +46,7 @@ export const { auth, signIn, signOut, store, isAuthenticated } = convexAuth({
             throw new Error("Role is required for sign up");
           }
           const requiredProfile = {
-            ...requiredAccount,
+            email: requiredAccount.email,
             role,
             name
           }
