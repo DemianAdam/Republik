@@ -34,7 +34,7 @@ export default function Contact() {
       <div
         className="absolute inset-0 bg-cover bg-center opacity-40"
         style={{
-          backgroundImage: `url(${asset("istockphoto-1466057420-2048x2048.png")})`,
+          backgroundImage: `url(${asset("hero-background.webp")})`,
           backgroundAttachment: 'fixed'
         }}
       />

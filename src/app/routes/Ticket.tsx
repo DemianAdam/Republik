@@ -125,7 +125,7 @@ export default function TicketPage() {
       {/* --- BACKGROUND LAYERS --- */}
       {/* 1. Leaves Image (Permanent, handles Grayscale logic) */}
       <img
-        src={asset("istockphoto-1466057420-2048x2048.png")}
+        src={asset("hero-background.webp")}
         alt=""
         className={`absolute inset-0 w-full h-full object-cover transition-all duration-1000 ease-in-out z-0
             ${isUsed ? 'grayscale opacity-10' : 'opacity-40'}

@@ -28,7 +28,7 @@ export default function SignIn() {
         {/* 3. Background Image & Overlays */}
         <div className="absolute inset-0">
           <img
-            src={asset("istockphoto-1466057420-2048x2048.png")}
+            src={asset("hero-background.webp")}
             alt="Background"
             className="w-full h-full object-cover opacity-50"
           />

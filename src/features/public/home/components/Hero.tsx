@@ -12,7 +12,7 @@ const navigate = useNavigate(); // 2. Initialize hook
   return (
     <section className="relative h-svh w-full bg-black pt-32  ">
       <img
-        src={asset("istockphoto-1466057420-2048x2048.png")}
+        src={asset("hero-background.webp")}
         aria-hidden="true"
         role="presentation"
         loading="eager"

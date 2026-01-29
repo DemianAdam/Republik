@@ -89,7 +89,7 @@ export default function SelfCheckIn() {
 
       {/* 1. Background Image (Layer 0) */}
       <img
-        src={asset("istockphoto-1466057420-2048x2048.png")}
+        src={asset("hero-background.webp")}
         aria-hidden="true"
         role="presentation"
         loading="eager"
