@@ -85,7 +85,7 @@ export default function PersonRow({ person }: PersonRowProps) {
                 }
               `}>
 
-            <div className={`absolute left-0 top-0 bottom-0 w-1.5 transition-colors ${isInside ? 'bg-red-600 shadow-[0_0_10px_#10b981]' : 'bg-transparent'}`} />
+            <div className={`absolute left-0 top-0 bottom-0 w-1.5 transition-colors ${isInside ? 'bg-red-600 shadow-[0_0_10px_#000000]' : 'bg-transparent'}`} />
 
             <div className="flex flex-col pl-3">
                 <div className="flex items-center gap-2">

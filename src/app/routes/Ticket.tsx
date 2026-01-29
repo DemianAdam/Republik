@@ -22,6 +22,8 @@ export default function TicketPage() {
 
   if (guestQuery.isPending) return <LoadingState />;
   //TODO: manage error
+  console.log(guestQuery);
+  
   if (guestQuery.isError) return <div>Error</div>;
 
   const guest = guestQuery.data;

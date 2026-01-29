@@ -152,7 +152,7 @@ export default function SelfCheckIn() {
           </button>
 
           <div className="inline-flex items-center justify-center gap-2 px-4 py-1.5 rounded-full bg-black/60 border border-red-600/20 text-xs text-zinc-300 font-medium uppercase tracking-widest backdrop-blur-md">
-            <div className="h-1.5 w-1.5 rounded-full bg-red-600 shadow-[0_0_10px_#10b981]" />
+            <div className="h-1.5 w-1.5 rounded-full bg-red-600 shadow-[0_0_10px_#000000]" />
             SECURE SYSTEM
           </div>
         </div>
