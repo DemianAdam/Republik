@@ -105,6 +105,9 @@ export const getByUserId = query({
             throw new ConvexError(ERROR_CODES.PERMISSIONS_INSUFFICIENT);
         }
 
-        return await ctx.db.query("persons").withIndex("index_userId", (q) => q.eq("userId", args.userId)).collect()
+        return await ctx.db.query("persons")
+            .withIndex("index_userId", (q) => q.eq("userId", args.userId))
+            .collect()
     },
 });
+

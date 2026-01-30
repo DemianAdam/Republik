@@ -13,4 +13,13 @@ export const personValidator = v.object({
 export const schema = defineTable(personValidator)
     .index("index_userId", ["userId"])
     .index("index_qr", ["qrCode"])
-    .index("index_dni", ["dni"])
+    .index("index_dni", ["dni"]);
+
+
+const personsConfigValidator = v.object({
+    limit: v.optional(v.number()),
+    dateLimit: v.optional(v.number()),
+    active: v.boolean()
+});
+
+export const configSchema = defineTable(personsConfigValidator);

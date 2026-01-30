@@ -1,9 +1,9 @@
 import { ConvexError, Infer } from "convex/values";
-import { MutationCtx } from "../_generated/server";
+import { ActionCtx, MutationCtx, QueryCtx } from "../_generated/server";
 import { personValidator } from "./schema";
 import { WithoutSystemFields } from "convex/server";
 import { Doc } from "../_generated/dataModel";
-import { incrementTotal, incrementOutside } from "./counter";
+import { incrementTotal, incrementOutside, getCounters } from "./counter";
 import { ERROR_CODES } from "../helpers/errors";
 import { incrementUserOutside, incrementUserTotal } from "../users/counter";
 
@@ -75,4 +75,28 @@ export function getAge(birthday: string) {
 function dateFromDateOnly(dateStr: string) {
     const [y, m, d] = dateStr.split("-").map(Number);
     return new Date(y, m - 1, d);
+}
+
+export async function getConfig(ctx: QueryCtx | MutationCtx) {
+    return await ctx.db.query("configs").first();
+}
+
+export async function validateConfig(ctx: QueryCtx | MutationCtx) {
+    const configs = await getConfig(ctx);
+
+    if (!configs) {
+        throw new ConvexError(ERROR_CODES.CONFIG_NOT_LOADED);
+    }
+    if (!configs.active) {
+        throw new ConvexError(ERROR_CODES.PERSONS_LIST_NOT_ACTIVE);
+    }
+
+    const counters = await getCounters(ctx);
+    if (configs.limit && counters.total >= configs.limit) {
+        throw new ConvexError(ERROR_CODES.PERSONS_LIST_LIMIT_REACHED);
+    }
+    const date = Date.now();
+    if (configs.dateLimit && date >= configs.dateLimit) {
+        throw new ConvexError(ERROR_CODES.PERSONS_LIST_DATE_LIMIT_REACHED);
+    }
 }

@@ -21,6 +21,9 @@ export const ERROR_CODES = {
   QR_NOT_FOUND: "qr_not_found",
 
   // Access Control / Ownership (Trying to edit/delete someone else's guest)
+  PERSONS_LIST_NOT_ACTIVE: "persons_list_not_active",
+  PERSONS_LIST_LIMIT_REACHED: "persons_list_limit_reached",
+  PERSONS_LIST_DATE_LIMIT_REACHED: "persons_list_date_limit_reached",
   PERSON_DELETE_NOT_ALLOWED: "person_delete_not_allowed",
   PERSON_UPDATE_NOT_ALLOWED: "person_update_not_allowed",
 
@@ -32,7 +35,8 @@ export const ERROR_CODES = {
   // --- GENERIC / SYSTEM ---
   UNKNOWN_ERROR: "unknown_error",
   NETWORK_ERROR: "network_error",
-  INVALID_DATA: "invalid_data"
+  INVALID_DATA: "invalid_data",
+  CONFIG_NOT_LOADED: "config_not_loaded"
 } as const;
 
 export const ERRORS = Object.values(ERROR_CODES)

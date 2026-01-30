@@ -5,8 +5,8 @@ import { ConvexError, Infer, v } from "convex/values";
 import { personValidator } from "./schema";
 import { Doc } from "../_generated/dataModel";
 import { WithoutSystemFields } from "convex/server";
-import { createPersonFunction, createPersonValidator, getAge, getGuestDataFromQr } from "./functions";
-import { decrementInside, decrementOutside, decrementTotal, incrementInside, incrementOutside } from "./counter";
+import { createPersonFunction, createPersonValidator, getAge, getConfig, getGuestDataFromQr, validateConfig } from "./functions";
+import { decrementInside, decrementOutside, decrementTotal, getCounters, incrementInside, incrementOutside } from "./counter";
 import { ERROR_CODES } from "../helpers/errors";
 import { createLogFunction } from "../errorLogs/functions";
 
@@ -14,6 +14,7 @@ export const createPerson = mutation({
     args: personValidator.omit("isInside", "userId", "qrCode"),
 
     handler: async (ctx, args) => {
+        await validateConfig(ctx);
         const user = await getCurrentUser(ctx);
         requirePermission(user, PERMISSIONS.CREATE_PERSON)
 
@@ -35,6 +36,7 @@ export const createQrPerson = mutation({
         userId: v.optional(v.id("users"))
     },
     handler: async (ctx, args) => {
+        await validateConfig(ctx);
         let person;
         try {
             person = getGuestDataFromQr(args.qrData);
